@@ -13,7 +13,7 @@ custom:
     local:
       firebaseServiceAccountJson: src/config/local.firebase.json
       sentryDSN: N/A
-      snsEndpoint: http://localhost:4002/
+      snsEndpoint: http://localhost:${self:custom.serverless-offline-sns.port}
     dev:
       firebaseServiceAccountJson: N/A
       sentryDSN: N/A
@@ -39,9 +39,14 @@ provider:
     SNS_ENDPOINT: ${self:custom.stage.${self:provider.stage}.snsEndpoint}
 
 functions:
-  hello:
-    handler: src/handler.hello
+  nicehashPayingScraper:
+    handler: src/scraping/nicehash-paying-scraper.handler
     events:
-      - http:
-          method: get
-          path: hello
+      - schedule:
+          rate: rate(1 minute)
+  # hello:
+  #   handler: src/handler.hello
+  #   events:
+  #     - http:
+  #         method: get
+  #         path: hello

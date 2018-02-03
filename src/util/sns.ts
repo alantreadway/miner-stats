@@ -2,8 +2,8 @@ import * as aws from 'aws-sdk';
 
 import { CONFIG } from 'config';
 
-export async function send(
-  message: {},
+export async function send<T>(
+  message: T,
   topic: string,
   subject: string,
 ): Promise<aws.SNS.PublishResponse> {
