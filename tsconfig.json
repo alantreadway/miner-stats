@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src/",
+    "sourceMap": true,
+    "strict": true,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "pretty": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "alwaysStrict": true,
+    "types": [
+      "node",
+      "jest"
+    ],
+    "lib": [
+      "es5",
+      "es2015"
+    ]
+  }
+}

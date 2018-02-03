@@ -1,0 +1,47 @@
+service:
+  name: minerstats
+
+plugins:
+  - serverless-webpack
+  - serverless-pseudo-parameters
+  - serverless-offline
+  - serverless-offline-scheduler
+  - serverless-offline-sns
+
+custom:
+  stage:
+    local:
+      firebaseServiceAccountJson: src/config/local.firebase.json
+      sentryDSN: N/A
+      snsEndpoint: http://localhost:4002/
+    dev:
+      firebaseServiceAccountJson: N/A
+      sentryDSN: N/A
+      snsEndpoint: N/A
+  serverless-offline-sns:
+    port: 4002
+    debug: false
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  profile: default
+  stage: ${opt:stage, 'local'}
+  region: eu-west-1
+  memorySize: 128
+  environment:
+    AWS_REGION: ${self:provider.stage}
+    DATA_UPDATE_SNS_ARN: arn:aws:sns:${self:provider.region}:#{AWS::AccountId}:miner-stats-data-update-${self:provider.stage}
+    FIREBASE_SERVICE_ACCOUNT_JSON: ${self:custom.stage.${self:provider.stage}.firebaseServiceAccountJson}
+    FIREBASE_DATABASE_URL: https://miner-stats-${self:provider.stage}.firebaseio.com/
+    SENTRY_DSN: ${self:custom.stage.${self:provider.stage}.sentryDSN}
+    SERVERLESS_STAGE_NAME: ${self:provider.stage}
+    SNS_ENDPOINT: ${self:custom.stage.${self:provider.stage}.snsEndpoint}
+
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
+          method: get
+          path: hello

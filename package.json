@@ -1,0 +1,77 @@
+{
+  "name": "aws-nodejs-typescript",
+  "version": "1.0.0",
+  "description": "Serverless webpack example using Typescript",
+  "main": "handler.js",
+  "scripts": {
+    "lint": "tslint -p .",
+    "start": "serverless offline start -s local",
+    "test": "jest --notify",
+    "test:ci": "JEST_JUNIT_OUTPUT=test_output/junit.xml jest --ci --coverage --testResultsProcessor=\"jest-junit\"",
+    "test:watch": "jest --watch --notify"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "0.0.22",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/bunyan": "^1.8.4",
+    "@types/faker": "^4.1.2",
+    "@types/jest": "^22.1.1",
+    "@types/node": "^8.0.57",
+    "@types/raven": "^2.1.4",
+    "@types/request-promise-native": "^1.0.13",
+    "faker": "^4.1.0",
+    "jest": "^22.1.4",
+    "serverless-offline": "^3.16.0",
+    "serverless-offline-scheduler": "^0.3.3",
+    "serverless-offline-sns": "^0.35.0",
+    "serverless-pseudo-parameters": "^1.2.0",
+    "serverless-webpack": "^4.0.0",
+    "ts-jest": "^22.0.2",
+    "ts-loader": "^2.3.7",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.188.0",
+    "bunyan": "^1.8.12",
+    "bunyan-sentry-stream": "^1.2.1",
+    "firebase-admin": "^5.8.2",
+    "raven": "^2.4.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "mapCoverage": true,
+    "coverageDirectory": "test_output/coverage",
+    "forceCoverageMatch": [
+      "**/*.spec.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      ".*\\.fixture\\.ts$"
+    ],
+    "coverageThreshold": {
+      "**/*.spec.ts": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "setupFiles": [
+      "./src/jest-init.fixture.ts"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/src/.*\\.spec\\.(ts|tsx|js)$"
+  }
+}
