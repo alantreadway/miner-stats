@@ -1,0 +1,37 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "v1": {
+      "algorithms": {
+        ".read": "auth != null"
+      },
+      "pool": {
+        ".read": "auth != null"
+      },
+      "users": {
+        "$uid": {
+          ".read": "$uid === auth.uid",
+          ".write": "$uid === auth.uid",
+          "rig-profile": {
+            "$name": {
+              ".validate": "$name.length < 50",
+              "$algo": {
+                ".validate": "root.child('/v1/algorithms/$algo').exists()",
+                "hash-rate": {
+                  ".validate": "data.isNumber()"
+                },
+                "$other": {
+                  ".validate": false
+                }
+              }
+            }
+          },
+          "$other": {
+            ".validate": false
+          }
+        }
+      }
+    }
+  }
+}

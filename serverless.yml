@@ -11,11 +11,9 @@ plugins:
 custom:
   stage:
     local:
-      firebaseServiceAccountJson: src/config/local.firebase.json
       sentryDSN: N/A
       snsEndpoint: http://localhost:${self:custom.serverless-offline-sns.port}
     dev:
-      firebaseServiceAccountJson: N/A
       sentryDSN: N/A
       snsEndpoint: N/A
   serverless-offline:
@@ -34,7 +32,7 @@ provider:
   environment:
     AWS_REGION: ${self:provider.stage}
     DATA_UPDATE_SNS_ARN: arn:aws:sns:${self:provider.region}:#{AWS::AccountId}:miner-stats-data-update-${self:provider.stage}
-    FIREBASE_SERVICE_ACCOUNT_JSON: ${self:custom.stage.${self:provider.stage}.firebaseServiceAccountJson}
+    FIREBASE_SERVICE_ACCOUNT_JSON: src/config/${self:provider.stage}.firebase.json
     FIREBASE_DATABASE_URL: https://miner-stats-${self:provider.stage}.firebaseio.com/
     SENTRY_DSN: ${self:custom.stage.${self:provider.stage}.sentryDSN}
     SERVERLESS_STAGE_NAME: ${self:provider.stage}
