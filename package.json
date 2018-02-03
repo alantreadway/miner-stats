@@ -5,7 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "lint": "tslint -p .",
-    "start": "serverless offline start -s local",
+    "start": "serverless offline start -s local --location .webpack/service",
     "test": "jest --notify",
     "test:ci": "JEST_JUNIT_OUTPUT=test_output/junit.xml jest --ci --coverage --testResultsProcessor=\"jest-junit\"",
     "test:watch": "jest --watch --notify"

@@ -5,6 +5,10 @@ module.exports = {
   entry: slsw.lib.entries,
   devtool: 'source-map',
   resolve: {
+    modules: [
+      path.resolve('./node_modules'),
+      path.resolve('./src')
+    ],
     extensions: [
       '.js',
       '.jsx',
