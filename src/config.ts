@@ -23,7 +23,7 @@ export const CONFIG = {
   sentryDSN: optional('SENTRY_DSN'),
   snsConfig: {
     endpoint: optional('SNS_ENDPOINT'),
-    region: required('AWS_REGION'),
+    region: required('REGION'),
   },
   stageName: required('SERVERLESS_STAGE_NAME'),
 };

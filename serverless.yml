@@ -1,5 +1,5 @@
 service:
-  name: minerstats
+  name: miner-stats
 
 plugins:
   - serverless-webpack
@@ -9,6 +9,9 @@ plugins:
   - serverless-offline-sns
 
 custom:
+  common:
+    dataUpdaterTopic: miner-stats-data-update-${self:provider.stage}
+    dataUpdaterArn: arn:aws:sns:${self:provider.region}:#{AWS::AccountId}:${self:custom.common.dataUpdaterTopic}
   stage:
     local:
       sentryDSN: N/A
@@ -17,7 +20,7 @@ custom:
       sentryDSN: N/A
       snsEndpoint: N/A
   serverless-offline:
-    location: ${opt:location} # Fix serverless-offline-sns + Webpack.
+    location: ${opt:location, ''} # Fix serverless-offline-sns + Webpack.
   serverless-offline-sns:
     port: 4002
     debug: false
@@ -29,14 +32,22 @@ provider:
   stage: ${opt:stage, 'local'}
   region: eu-west-1
   memorySize: 128
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - sns:Publish
+      Resource: ${self:custom.common.dataUpdaterArn}
   environment:
-    AWS_REGION: ${self:provider.stage}
-    DATA_UPDATE_SNS_ARN: arn:aws:sns:${self:provider.region}:#{AWS::AccountId}:miner-stats-data-update-${self:provider.stage}
+    REGION: ${self:provider.region}
+    DATA_UPDATE_SNS_ARN: ${self:custom.common.dataUpdaterArn}
     FIREBASE_SERVICE_ACCOUNT_JSON: src/config/${self:provider.stage}.firebase.json
     FIREBASE_DATABASE_URL: https://miner-stats-${self:provider.stage}.firebaseio.com/
     SENTRY_DSN: ${self:custom.stage.${self:provider.stage}.sentryDSN}
     SERVERLESS_STAGE_NAME: ${self:provider.stage}
     SNS_ENDPOINT: ${self:custom.stage.${self:provider.stage}.snsEndpoint}
+
+package:
+  individually: true
 
 functions:
   nicehashPayingScraper:
@@ -51,9 +62,24 @@ functions:
       - sns:
           arn: ${self:provider.environment.DATA_UPDATE_SNS_ARN}
 
-  # hello:
-  #   handler: src/handler.hello
-  #   events:
-  #     - http:
-  #         method: get
-  #         path: hello
+  hello:
+    handler: src/handler.hello
+
+# See common overrides for defaults here:
+# https://serverless.com/framework/docs/providers/aws/guide/resources/
+resources:
+  Resources:
+    PriceEventTopic:
+      Type: AWS::SNS::Topic
+      Properties:
+        TopicName: ${self:custom.common.dataUpdaterTopic}
+
+    NicehashPayingScraperLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: 7
+
+    DataUpdaterLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: 7

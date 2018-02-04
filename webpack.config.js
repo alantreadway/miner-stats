@@ -5,6 +5,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: slsw.lib.entries,
   devtool: 'source-map',
+  externals: [
+    'aws-sdk',
+    'aws-lambda',
+  ],
   resolve: {
     mainFields: ['main'],
     modules: [

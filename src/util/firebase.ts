@@ -21,9 +21,7 @@ export function getFirebaseApp(context?: Context): firebase.app.App {
   if (app == null) {
     // Takes over 5 seconds to init lambdas on init
     return firebase.initializeApp({
-      credential: firebase.credential.cert(
-        `${process.env.PWD}/${CONFIG.firebase.serviceAccountJson}`,
-      ),
+      credential: firebase.credential.cert(CONFIG.firebase.serviceAccountJson),
       databaseURL: CONFIG.firebase.databaseUrl,
     });
   }

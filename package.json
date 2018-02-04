@@ -8,7 +8,8 @@
     "start": "serverless offline start --color -s local --location .webpack/service | bunyan -o short",
     "test": "jest --notify",
     "test:ci": "JEST_JUNIT_OUTPUT=test_output/junit.xml jest --ci --coverage --testResultsProcessor=\"jest-junit\"",
-    "test:watch": "jest --watch --notify"
+    "test:watch": "jest --watch --notify",
+    "deploy": "serverless deploy -s ${ENV} -v"
   },
   "devDependencies": {
     "@types/aws-lambda": "0.0.22",

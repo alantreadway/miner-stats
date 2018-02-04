@@ -1,15 +1,20 @@
-import { APIGatewayEvent, Callback, Context, Handler } from 'aws-lambda';
+import { Callback, Context, Handler } from 'aws-lambda';
+import { CONFIG } from 'config';
+import * as fs from 'fs';
 
-export const hello: Handler = (event: APIGatewayEvent, context: Context, cb?: Callback) => {
-  const response = {
-    body: JSON.stringify({
-      input: event,
-      message: 'Go Serverless Webpack (Typescript) v1.0! Your function executed successfully!',
-    }),
-    statusCode: 200,
-  };
+export const hello: Handler = (event: {}, context: Context, cb?: Callback) => {
+  // tslint:disable-next-line:no-console
+  console.log(
+    {
+      __dirname,
+      exists: fs.existsSync(CONFIG.firebase.serviceAccountJson),
+      json: CONFIG.firebase.serviceAccountJson,
+      pwd: process.env.PWD,
+    },
+    'Here!',
+  );
 
   if (cb) {
-    cb(null, response);
+    cb(null, 'Success!');
   }
 };
