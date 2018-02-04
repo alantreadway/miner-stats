@@ -17,8 +17,11 @@ function optional(envVariable: string): string | undefined {
 export const CONFIG = {
   dataUpdateSnsArn: required('DATA_UPDATE_SNS_ARN'),
   firebase: {
+    credentials: required('FIREBASE_CREDENTIALS'),
     databaseUrl: required('FIREBASE_DATABASE_URL'),
-    serviceAccountJson: required('FIREBASE_SERVICE_ACCOUNT_JSON'),
+  },
+  kmsConfig: {
+    region: required('REGION'),
   },
   sentryDSN: optional('SENTRY_DSN'),
   snsConfig: {

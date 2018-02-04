@@ -24,6 +24,7 @@
     "copy-webpack-plugin": "^4.3.1",
     "faker": "^4.1.0",
     "jest": "^22.1.4",
+    "serverless-kms-secrets": "^1.0.2",
     "serverless-offline": "^3.16.0",
     "serverless-offline-scheduler": "^0.3.3",
     "serverless-offline-sns": "^0.35.0",

@@ -7,6 +7,7 @@ plugins:
   - serverless-offline
   - serverless-offline-scheduler
   - serverless-offline-sns
+  - serverless-kms-secrets
 
 custom:
   common:
@@ -24,6 +25,9 @@ custom:
   serverless-offline-sns:
     port: 4002
     debug: false
+  serverless-kms-secrets:
+    secretsFile: src/config/kms-secrets.${self:provider.stage}.yml
+  kmsSecrets: ${file(${self:custom.serverless-kms-secrets.secretsFile})}
 
 provider:
   name: aws
@@ -37,10 +41,14 @@ provider:
       Action:
         - sns:Publish
       Resource: ${self:custom.common.dataUpdaterArn}
+    - Effect: Allow
+      Action:
+      - KMS:Decrypt
+      Resource: ${self:custom.kmsSecrets.keyArn}
   environment:
     REGION: ${self:provider.region}
     DATA_UPDATE_SNS_ARN: ${self:custom.common.dataUpdaterArn}
-    FIREBASE_SERVICE_ACCOUNT_JSON: src/config/${self:provider.stage}.firebase.json
+    FIREBASE_CREDENTIALS: ${self:custom.kmsSecrets.secrets.FIREBASE_CREDENTIALS}
     FIREBASE_DATABASE_URL: https://miner-stats-${self:provider.stage}.firebaseio.com/
     SENTRY_DSN: ${self:custom.stage.${self:provider.stage}.sentryDSN}
     SERVERLESS_STAGE_NAME: ${self:provider.stage}
