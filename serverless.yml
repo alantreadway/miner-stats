@@ -73,9 +73,6 @@ functions:
       - sns:
           arn: ${self:provider.environment.DATA_UPDATE_SNS_ARN}
 
-  hello:
-    handler: src/handler.hello
-
 # See common overrides for defaults here:
 # https://serverless.com/framework/docs/providers/aws/guide/resources/
 resources:
