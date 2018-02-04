@@ -63,12 +63,10 @@ functions:
     handler: src/scraping/nicehash-paying-scraper.handler
     events:
       - schedule:
-          rate: rate(1 minute)
+          rate: rate(5 minute)
 
   dataUpdater:
     handler: src/data-updater/data-updater.handler
-    memorySize: 256
-    timeout: 15
     events:
       - sns:
           arn: ${self:provider.environment.DATA_UPDATE_SNS_ARN}

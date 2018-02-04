@@ -36,6 +36,7 @@
     "tslint": "^5.9.1",
     "tslint-eslint-rules": "^4.1.1",
     "typescript": "^2.5.2",
+    "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.6.0"
   },
   "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",

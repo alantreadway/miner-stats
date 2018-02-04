@@ -1,10 +1,11 @@
 const path = require('path');
 const slsw = require('serverless-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: slsw.lib.entries,
-  devtool: 'source-map',
+  devtool: 'eval',
   externals: [
     'aws-sdk',
     'aws-lambda',
@@ -39,5 +40,8 @@ module.exports = {
       { from: 'src/**/*.json' },
       { from: 'src/**/*.yml' },
     ]),
+    new UglifyJsPlugin({
+      test: /\.js($|\?)/i,
+    }),
   ],
 };
