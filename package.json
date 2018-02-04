@@ -17,6 +17,7 @@
     "@types/bunyan": "^1.8.4",
     "@types/faker": "^4.1.2",
     "@types/jest": "^22.1.1",
+    "@types/js-yaml": "^3.10.1",
     "@types/lodash": "^4.14.100",
     "@types/node": "^8.0.57",
     "@types/raven": "^2.1.4",
@@ -44,6 +45,7 @@
     "bunyan": "^1.8.12",
     "bunyan-sentry-stream": "^1.2.1",
     "firebase-admin": "^5.8.2",
+    "js-yaml": "^3.10.0",
     "lodash": "^4.17.4",
     "raven": "^2.4.0",
     "request-promise-native": "^1.0.5"

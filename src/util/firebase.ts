@@ -4,6 +4,8 @@ import * as firebase from 'firebase-admin';
 import { CONFIG } from 'config';
 import { decrypt } from 'util/kms';
 
+let initAppPromise: Promise<firebase.app.App>;
+
 /**
  * Returns an existing Firebase App instance, or creates a new one if necesssary.
  *
@@ -20,14 +22,25 @@ export async function getFirebaseApp(context?: Context): Promise<firebase.app.Ap
 
   const app = firebase.apps[0];
   if (app == null) {
-    const certBlob = await decrypt(CONFIG.firebase.credentials);
-    const certJson = JSON.parse(new Buffer(certBlob, 'base64').toString());
+    // Since loading of client credentials is asynchronous, this is a critical block; initAppPromise
+    // acts as a semaphore to ensure that only the first caller triggers initialisation, the rest
+    // just wait for the first caller to complete app initialisation.
+    if (initAppPromise == null) {
+      initAppPromise = (async (): Promise<firebase.app.App> => {
+        const certBlob = await decrypt(
+          await CONFIG.firebase.credentials(),
+        );
+        const certJson = JSON.parse(new Buffer(certBlob, 'base64').toString());
 
-    // Takes over 5 seconds to init lambdas on init
-    return firebase.initializeApp({
-      credential: firebase.credential.cert(certJson),
-      databaseURL: CONFIG.firebase.databaseUrl,
-    });
+        // Takes over 5 seconds to init lambdas on init
+        return firebase.initializeApp({
+          credential: firebase.credential.cert(certJson),
+          databaseURL: CONFIG.firebase.databaseUrl,
+        });
+      })();
+    }
+
+    return await initAppPromise;
   }
 
   // Only takes 200ms to reuse the 'app' if already run.

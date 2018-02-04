@@ -1,3 +1,6 @@
+import * as fs from 'fs';
+import * as yaml from 'js-yaml';
+
 function required(envVariable: string): string {
   const val = process.env[envVariable];
   if (val == null || val.trim().length === 0) {
@@ -14,15 +17,36 @@ function optional(envVariable: string): string | undefined {
   return val;
 }
 
+type Base64EncodedSecretString = string;
+
+interface SecretsFile {
+  secrets: {
+    FIREBASE_CREDENTIALS: Base64EncodedSecretString;
+  };
+  keyArn: string;
+}
+
+let loadedSecrets: SecretsFile | undefined;
+
 export const CONFIG = {
   dataUpdateSnsArn: required('DATA_UPDATE_SNS_ARN'),
   firebase: {
-    credentials: required('FIREBASE_CREDENTIALS'),
+    credentials: async (): Promise<Base64EncodedSecretString> => {
+      return (await CONFIG.secrets()).secrets.FIREBASE_CREDENTIALS;
+    },
     databaseUrl: required('FIREBASE_DATABASE_URL'),
   },
   kmsConfig: {
     region: required('REGION'),
   },
+  secrets: async (): Promise<SecretsFile> => {
+    if (loadedSecrets == null) {
+      const secretsBuffer = fs.readFileSync(CONFIG.secretsFile);
+      loadedSecrets = yaml.safeLoad(secretsBuffer.toString());
+    }
+    return loadedSecrets!;
+  },
+  secretsFile: required('SECRETS_FILE'),
   sentryDSN: optional('SENTRY_DSN'),
   snsConfig: {
     endpoint: optional('SNS_ENDPOINT'),

@@ -48,7 +48,7 @@ provider:
   environment:
     REGION: ${self:provider.region}
     DATA_UPDATE_SNS_ARN: ${self:custom.common.dataUpdaterArn}
-    FIREBASE_CREDENTIALS: ${self:custom.kmsSecrets.secrets.FIREBASE_CREDENTIALS}
+    SECRETS_FILE: ${self:custom.serverless-kms-secrets.secretsFile}
     FIREBASE_DATABASE_URL: https://miner-stats-${self:provider.stage}.firebaseio.com/
     SENTRY_DSN: ${self:custom.stage.${self:provider.stage}.sentryDSN}
     SERVERLESS_STAGE_NAME: ${self:provider.stage}
