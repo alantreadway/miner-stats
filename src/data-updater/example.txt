@@ -1,0 +1,1 @@
+{\"algorithm\":\"equihash\",\"currencyAmount\":{\"amount\":611.45456654,\"currency\":\"BTC\"},\"pool\":\"NICEHASH\",\"timestamp\":1517693460,\"type\":\"mining-pool-algo-profitability\"}
