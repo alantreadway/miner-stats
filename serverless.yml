@@ -63,7 +63,13 @@ functions:
     handler: src/scraping/nicehash-paying-scraper.handler
     events:
       - schedule:
-          rate: rate(5 minute)
+          rate: rate(1 minute)
+
+  ahashpoolStatusScraper:
+    handler: src/scraping/ahashpool-status-scraper.handler
+    events:
+      - schedule:
+          rate: rate(1 minute)
 
   dataUpdater:
     handler: src/data-updater/data-updater.handler
@@ -81,6 +87,11 @@ resources:
         TopicName: ${self:custom.common.dataUpdaterTopic}
 
     NicehashPayingScraperLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: 7
+
+    AhashpoolStatusScraper:
       Type: AWS::Logs::LogGroup
       Properties:
         RetentionInDays: 7
