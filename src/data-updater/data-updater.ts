@@ -63,7 +63,7 @@ async function processPoolProfitability(
     timestamp: flooredTimestamp,
   };
   await setWithPriority(
-    `/v1/pool/${pool}/${algo}/profitability/per-minute/${flooredTimestamp}`,
+    `/v2/pool/${pool}/${algo}/profitability/per-minute/${flooredTimestamp}`,
     record,
     flooredTimestamp,
     context,
@@ -72,7 +72,7 @@ async function processPoolProfitability(
   for (const period of [TimeGranularity.HOUR, TimeGranularity.DAY]) {
     const periodTimestamp = floorTimeToGranularity(update.timestamp, period);
     const periodName = TimeGranularity[period].toLowerCase();
-    const periodKey = `/v1/pool/${pool}/${algo}/profitability/per-${periodName}/${periodTimestamp}`;
+    const periodKey = `/v2/pool/${pool}/${algo}/profitability/per-${periodName}/${periodTimestamp}`;
 
     let periodRecord = await get<MiningPoolAlgorithmProfitabilityRollup>(periodKey);
     if (periodRecord == null) {
