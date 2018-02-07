@@ -17,9 +17,11 @@ custom:
     local:
       sentryDSN: N/A
       snsEndpoint: http://localhost:${self:custom.serverless-offline-sns.port}
+      scraperRate: rate(1 minute)
     dev:
       sentryDSN: N/A
       snsEndpoint: N/A
+      scraperRate: rate(5 minutes)
   serverless-offline:
     location: ${opt:location, ''} # Fix serverless-offline-sns + Webpack.
   serverless-offline-sns:
@@ -63,13 +65,13 @@ functions:
     handler: src/scraping/nicehash-paying-scraper.handler
     events:
       - schedule:
-          rate: rate(1 minute)
+          rate: ${self:custom.stage.${self:provider.stage}.scraperRate}
 
   ahashpoolStatusScraper:
     handler: src/scraping/ahashpool-status-scraper.handler
     events:
       - schedule:
-          rate: rate(1 minute)
+          rate: ${self:custom.stage.${self:provider.stage}.scraperRate}
 
   dataUpdater:
     handler: src/data-updater/data-updater.handler
