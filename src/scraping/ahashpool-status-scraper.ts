@@ -46,7 +46,7 @@ export async function handler(event: {}, context: Context, callback: Callback): 
         .map(async (algo) => {
           const result = response[algo];
           if (!isAlgorithm(algo)) {
-            LOGGER.warn({  }, 'Unrecognised name/algorithm.');
+            LOGGER.warn({ algo }, 'Unrecognised name/algorithm.');
             return;
           }
 

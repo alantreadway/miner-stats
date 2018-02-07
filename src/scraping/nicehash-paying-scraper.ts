@@ -45,7 +45,7 @@ export async function handler(event: {}, context: Context, callback: Callback): 
             {
               algorithm: algo,
               currencyAmount: {
-                amount: Number(result.paying),
+                amount: Number(result.paying) / 1000,
                 currency: 'BTC',
               },
               pool: 'NICEHASH',
