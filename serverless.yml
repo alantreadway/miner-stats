@@ -73,6 +73,12 @@ functions:
       - schedule:
           rate: ${self:custom.stage.${self:provider.stage}.scraperRate}
 
+  miningpoolhubStatsScraper:
+    handler: src/scraping/miningpoolhub-stats-scraper.handler
+    events:
+      - schedule:
+          rate: ${self:custom.stage.${self:provider.stage}.scraperRate}
+
   dataUpdater:
     handler: src/data-updater/data-updater.handler
     events:
@@ -88,17 +94,22 @@ resources:
       Properties:
         TopicName: ${self:custom.common.dataUpdaterTopic}
 
+    AhashpoolStatusScraperLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: 1
+
+    MiningpoolhubStatsScraperLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: 1
+
     NicehashPayingScraperLogGroup:
       Type: AWS::Logs::LogGroup
       Properties:
-        RetentionInDays: 7
-
-    AhashpoolStatusScraper:
-      Type: AWS::Logs::LogGroup
-      Properties:
-        RetentionInDays: 7
+        RetentionInDays: 1
 
     DataUpdaterLogGroup:
       Type: AWS::Logs::LogGroup
       Properties:
-        RetentionInDays: 7
+        RetentionInDays: 1
