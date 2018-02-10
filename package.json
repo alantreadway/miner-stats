@@ -9,7 +9,8 @@
     "test": "jest --notify",
     "test:ci": "JEST_JUNIT_OUTPUT=test_output/junit.xml jest --ci --coverage --testResultsProcessor=\"jest-junit\"",
     "test:watch": "jest --watch --notify",
-    "deploy": "serverless deploy -s ${ENV} -v && firebase deploy"
+    "deploy": "serverless deploy -s ${ENV} -v && firebase deploy",
+    "deploy:data": "firebase database:set /v2/rig-profile ./rig-profiles.json"
   },
   "devDependencies": {
     "@types/aws-lambda": "0.0.22",

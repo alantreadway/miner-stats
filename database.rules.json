@@ -3,16 +3,27 @@
     ".read": false,
     ".write": false,
     "v2": {
-      "algorithms": {
+      "rig-profile": {
+        ".read": "auth != null"
+      },
+      "algorithm": {
         ".read": "auth != null"
       },
       "pool": {
         ".read": "auth != null"
       },
-      "users": {
+      "user": {
         "$uid": {
           ".read": "$uid === auth.uid",
           ".write": "$uid === auth.uid",
+          "defaults": {
+            "rig-profile": {
+              ".validate": "data.isString()"
+            },
+            "$other": {
+              ".validate": false
+            }
+          },
           "rig-profile": {
             "$name": {
               ".validate": "$name.length < 50",
