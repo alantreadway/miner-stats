@@ -9,7 +9,7 @@
     "test": "jest --notify",
     "test:ci": "JEST_JUNIT_OUTPUT=test_output/junit.xml jest --ci --coverage --testResultsProcessor=\"jest-junit\"",
     "test:watch": "jest --watch --notify",
-    "deploy": "serverless deploy -s ${ENV} -v"
+    "deploy": "serverless deploy -s ${ENV} -v && firebase deploy"
   },
   "devDependencies": {
     "@types/aws-lambda": "0.0.22",
@@ -24,6 +24,7 @@
     "@types/request-promise-native": "^1.0.13",
     "copy-webpack-plugin": "^4.3.1",
     "faker": "^4.1.0",
+    "firebase-tools": "^3.17.4",
     "jest": "^22.1.4",
     "serverless-kms-secrets": "^1.0.2",
     "serverless-offline": "^3.16.0",
