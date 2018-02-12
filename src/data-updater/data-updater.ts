@@ -1,23 +1,10 @@
 import { Callback, Context, SNSEvent } from 'aws-lambda';
 
 import { DataUpdate, MiningPoolAlgorithmProfitability } from 'model/data-update';
-import { DigitalCurrencyAmount } from 'model/digital-currency';
 import { LOGGER } from 'util/bunyan';
 import { get, setWithPriority } from 'util/firebase';
-import { floorTimeToGranularity, SecondsSinceEpoch, TimeGranularity } from 'util/time-series';
-
-interface MiningPoolAlgorithmProfitabilityRecord {
-  amount: DigitalCurrencyAmount;
-  timestamp: SecondsSinceEpoch;
-}
-
-interface MiningPoolAlgorithmProfitabilityRollup {
-  min: DigitalCurrencyAmount;
-  max: DigitalCurrencyAmount;
-  sum: DigitalCurrencyAmount;
-  count: number;
-  timestamp: SecondsSinceEpoch;
-}
+import * as schema from 'util/schema';
+import { floorTimeToGranularity, TimeGranularity } from 'util/time-series';
 
 export async function handler(
   event: SNSEvent,
@@ -54,27 +41,31 @@ async function processPoolProfitability(
   update: MiningPoolAlgorithmProfitability,
   context: Context,
 ): Promise<void> {
-  const algo = update.algorithm.toLowerCase();
-  const pool = update.pool.toLowerCase();
-  const flooredTimestamp = floorTimeToGranularity(update.timestamp, TimeGranularity.MINUTE);
+  const algo = update.algorithm.toLowerCase() as schema.Algorithm;
+  const pool = update.pool.toLowerCase() as schema.Pool;
+  const flooredTimestamp = floorTimeToGranularity(update.timestamp, TimeGranularity.MINUTE) as
+    keyof schema.PoolProfitability['per-minute'];
 
-  const record: MiningPoolAlgorithmProfitabilityRecord = {
+  const record: schema.PoolAlgoRecord = {
     amount: update.currencyAmount,
     timestamp: flooredTimestamp,
   };
   await setWithPriority(
-    `/v2/pool/${pool}/${algo}/profitability/per-minute/${flooredTimestamp}`,
+    ['v2', 'pool', pool, algo, 'profitability', 'per-minute', flooredTimestamp],
     record,
     flooredTimestamp,
     context,
   );
 
   for (const period of [TimeGranularity.HOUR, TimeGranularity.DAY]) {
-    const periodTimestamp = floorTimeToGranularity(update.timestamp, period);
-    const periodName = TimeGranularity[period].toLowerCase();
-    const periodKey = `/v2/pool/${pool}/${algo}/profitability/per-${periodName}/${periodTimestamp}`;
+    const periodName = `per-${TimeGranularity[period].toLowerCase()}` as 'per-hour' | 'per-day';
+    const periodTimestamp = floorTimeToGranularity(update.timestamp, period) as
+      keyof schema.PoolProfitability[typeof periodName];
 
-    let periodRecord = await get<MiningPoolAlgorithmProfitabilityRollup>(periodKey);
+    let periodRecord = await get(
+      ['v2', 'pool', pool, algo, 'profitability', periodName, periodTimestamp ],
+      context,
+    );
     if (periodRecord == null) {
       periodRecord = {
         count: 1,
@@ -104,6 +95,11 @@ async function processPoolProfitability(
       };
     }
 
-    await setWithPriority(periodKey, periodRecord, periodTimestamp, context);
+    await setWithPriority(
+      ['v2', 'pool', pool, algo, 'profitability', periodName, periodTimestamp],
+      periodRecord,
+      periodTimestamp,
+      context,
+    );
   }
 }

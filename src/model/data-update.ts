@@ -1,6 +1,6 @@
 import { Algorithm } from 'model/algorithm';
-import { DigitalCurrencyAmount } from 'model/digital-currency';
 import { MiningPool } from 'model/mining-pool';
+import * as schema from 'util/schema';
 import { SecondsSinceEpoch } from 'util/time-series';
 
 export type DataUpdate = MiningPoolAlgorithmProfitability | MiningPoolBalance;
@@ -11,7 +11,7 @@ export interface MiningPoolAlgorithmProfitability {
 
   pool: MiningPool;
   algorithm: Algorithm;
-  currencyAmount: DigitalCurrencyAmount;
+  currencyAmount: schema.DigitalCurrencyAmount;
 }
 
 export interface MiningPoolBalance {
@@ -19,5 +19,5 @@ export interface MiningPoolBalance {
   timestamp: SecondsSinceEpoch;
 
   pool: MiningPool;
-  balance: DigitalCurrencyAmount;
+  balance: schema.DigitalCurrencyAmount;
 }
