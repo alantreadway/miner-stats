@@ -1,1 +1,1 @@
-export type MiningPool = 'NICEHASH' | 'AHASHPOOL' | 'MININGPOOLHUB';
+export type MiningPool = 'nicehash' | 'ahashpool' | 'miningpoolhub' | 'nanopool';

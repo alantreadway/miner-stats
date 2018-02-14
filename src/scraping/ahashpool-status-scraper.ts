@@ -57,7 +57,7 @@ export async function handler(event: {}, context: Context, callback: Callback): 
                 amount: Number(result.estimate_current),
                 currency: 'BTC',
               },
-              pool: 'AHASHPOOL',
+              pool: 'ahashpool',
               timestamp: getCurrentTimeInSeconds(),
               type: 'mining-pool-algo-profitability',
             },

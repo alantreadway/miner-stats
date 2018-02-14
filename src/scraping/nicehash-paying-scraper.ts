@@ -48,7 +48,7 @@ export async function handler(event: {}, context: Context, callback: Callback): 
                 amount: Number(result.paying) / 1000,
                 currency: 'BTC',
               },
-              pool: 'NICEHASH',
+              pool: 'nicehash',
               timestamp: getCurrentTimeInSeconds(),
               type: 'mining-pool-algo-profitability',
             },

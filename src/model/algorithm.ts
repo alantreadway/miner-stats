@@ -2,7 +2,8 @@ import * as schema from 'util/schema';
 
 export type Algorithm = schema.Algorithm;
 
-const enum HashRate {
+export const enum HashRate {
+  H = 1,
   KH = 1e3,
   GH = 1e9,
   MH = 1e6,
@@ -12,19 +13,34 @@ const enum HashRate {
 
 export interface AlgorithmMetadata<T extends schema.Algorithm> {
   algorithm: T;
-  hashRateMultiplier: HashRate;
+  hashRateMultiplier: {
+    [key in schema.Pool]: HashRate;
+  };
 }
 
 function buildAlgorithmMetadata<T extends schema.Algorithm>(algo: T): AlgorithmMetadata<T> {
-  let hashRate = HashRate.MH;
+  let hashRateMultiplier: AlgorithmMetadata<'blake2s'>['hashRateMultiplier'] = {
+    ahashpool: HashRate.MH,
+    miningpoolhub: HashRate.MH,
+    nanopool: HashRate.MH,
+    nicehash: HashRate.MH,
+  };
   switch (algo) {
     case 'blake2s':
     case 'blakecoin':
-      hashRate = HashRate.GH;
+      hashRateMultiplier.ahashpool = HashRate.GH;
+      break;
+
+    case 'cryptonight':
+      hashRateMultiplier.nanopool = HashRate.H;
+      break;
+
+    case 'equihash':
+      hashRateMultiplier.nanopool = HashRate.H;
       break;
 
     case 'yesscript':
-      hashRate = HashRate.KH;
+      hashRateMultiplier.ahashpool = HashRate.KH;
       break;
 
     default:
@@ -32,7 +48,7 @@ function buildAlgorithmMetadata<T extends schema.Algorithm>(algo: T): AlgorithmM
 
   return {
     algorithm: algo,
-    hashRateMultiplier: hashRate,
+    hashRateMultiplier,
   };
 }
 

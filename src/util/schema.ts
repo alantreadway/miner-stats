@@ -6,6 +6,7 @@ const ALGORITHMS = {
   blake256r14: true,
   blake256r8: true,
   blake256r8vnl: true,
+  blake2b: true,
   blake2s: true,
   blakecoin: true,
   bmw: true,
@@ -74,21 +75,28 @@ const ALGORITHMS = {
   zr5: true,
 };
 
-const POOLS = {
+const ALGO_FOCUSED_POOLS = {
   ahashpool: true,
   miningpoolhub: true,
   nicehash: true,
 };
 
+const COIN_FOCUSED_POOLS = {
+  nanopool: true,
+};
+
 export type Algorithm = keyof typeof ALGORITHMS;
 export const ALL_ALGORITHMS = Object.keys(ALGORITHMS) as Algorithm[];
 
-export type Pool = keyof typeof POOLS;
-export const ALL_POOLS = Object.keys(POOLS) as Pool[];
+export type AlgoFocusedPool = keyof typeof ALGO_FOCUSED_POOLS;
+export type CoinFocusedPool = keyof typeof COIN_FOCUSED_POOLS;
+export type Pool = AlgoFocusedPool | CoinFocusedPool;
+export const ALL_POOLS = Object.keys(ALGO_FOCUSED_POOLS)
+  .concat(Object.keys(COIN_FOCUSED_POOLS)) as Pool[];
 
 export type SecondsSinceEpoch = number;
 
-export type DigitalCurrency = 'BTC';
+export type DigitalCurrency = 'BTC' | 'ETC' | 'ETH' | 'ETN' | 'PASC' | 'SIA' | 'XMR' | 'ZEC';
 
 export interface DigitalCurrencyAmount {
   currency: DigitalCurrency;
@@ -136,16 +144,283 @@ export interface UserProfile {
   };
 }
 
+export type CoinPoolTree = {
+  [pool in CoinFocusedPool]: {
+    [coin in DigitalCurrency]: PoolStatistics;
+  };
+};
+
+export type AlgoPoolTree = {
+  [pool in AlgoFocusedPool]: PoolStatistics;
+};
+
+export interface AlgoPoolCurrent extends PoolAlgoRecord {
+  pool: Pool;
+  algo: Algorithm;
+}
+
+export interface CoinPoolCurrent extends PoolAlgoRecord {
+  pool: Pool;
+  coin: DigitalCurrency;
+  algo: Algorithm;
+}
+
+export type PoolCurrent = AlgoPoolCurrent | CoinPoolCurrent;
+
 export interface Schema {
   v2: {
     'rig-profile': {
       [profileUuid: string]: RigProfile;
     };
     pool: {
-      [key in Pool]: PoolStatistics;
+      algo: AlgoPoolTree;
+      coin: CoinPoolTree;
+      // Set of all most recently scraped values, also acts as an index for the algo/coin sub-trees
+      // to understand the full range of possible permutations of keys.
+      latest: {
+        [pool in Pool]: PoolCurrent;
+      };
     };
     user: {
       [firebaseUid: string]: UserProfile;
     };
   };
+}
+
+export interface ValidPath<R> {
+  path: string[];
+  returnType?: R;
+}
+
+export interface ValidPathForList<R> {
+  path: string[];
+  returnType?: R;
+}
+
+export function validPath<
+  A extends keyof Schema,
+  R extends Schema[A]
+>(
+  key: [A],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  R extends Schema[A][B]
+>(
+  key: [A, B],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  R extends Schema[A][B][C]
+>(
+  key: [A, B, C],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  R extends Schema[A][B][C][D]
+>(
+  key: [A, B, C, D],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  R extends Schema[A][B][C][D][E]
+>(
+  key: [A, B, C, D, E],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  R extends Schema[A][B][C][D][E][F]
+>(
+  key: [A, B, C, D, E, F],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  G extends keyof Schema[A][B][C][D][E][F],
+  R extends Schema[A][B][C][D][E][F][G]
+>(
+  key: [A, B, C, D, E, F, G],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  G extends keyof Schema[A][B][C][D][E][F],
+  H extends keyof Schema[A][B][C][D][E][F][G],
+  R extends Schema[A][B][C][D][E][F][G][H]
+>(
+  key: [A, B, C, D, E, F, G, H],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  G extends keyof Schema[A][B][C][D][E][F],
+  H extends keyof Schema[A][B][C][D][E][F][G],
+  I extends keyof Schema[A][B][C][D][E][F][G][H],
+  R extends Schema[A][B][C][D][E][F][G][H][I]
+>(
+  key: [A, B, C, D, E, F, G, H, I],
+): ValidPath<R>;
+export function validPath<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  G extends keyof Schema[A][B][C][D][E][F],
+  H extends keyof Schema[A][B][C][D][E][F][G],
+  I extends keyof Schema[A][B][C][D][E][F][G][H],
+  J extends keyof Schema[A][B][C][D][E][F][G][H][I],
+  R extends Schema[A][B][C][D][E][F][G][H][I][J]
+>(
+  key: [A, B, C, D, E, F, G, H, I, J],
+): ValidPath<R>;
+export function validPath(path: string[]): ValidPath<{}> {
+  return { path };
+}
+
+export function validPathForList<
+  A extends keyof Schema,
+  Z extends keyof Schema[A],
+  R extends Schema[A][Z]
+>(
+  path: [A],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  Z extends keyof Schema[A][B],
+  R extends Schema[A][B][Z]
+>(
+  path: [A, B],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  Z extends keyof Schema[A][B][C],
+  R extends Schema[A][B][C][Z]
+>(
+  path: [A, B, C],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  Z extends keyof Schema[A][B][C][D],
+  R extends Schema[A][B][C][D][Z]
+>(
+  path: [A, B, C, D],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  Z extends keyof Schema[A][B][C][D][E],
+  R extends Schema[A][B][C][D][E][Z]
+>(
+  path: [A, B, C, D, E],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  Z extends keyof Schema[A][B][C][D][E][F],
+  R extends Schema[A][B][C][D][E][F][Z]
+>(
+  path: [A, B, C, D, E, F],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  G extends keyof Schema[A][B][C][D][E][F],
+  Z extends keyof Schema[A][B][C][D][E][F][G],
+  R extends Schema[A][B][C][D][E][F][G][Z]
+>(
+  path: [A, B, C, D, E, F, G],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  G extends keyof Schema[A][B][C][D][E][F],
+  H extends keyof Schema[A][B][C][D][E][F][G],
+  Z extends keyof Schema[A][B][C][D][E][F][G][H],
+  R extends Schema[A][B][C][D][E][F][G][H][Z]
+>(
+  path: [A, B, C, D, E, F, G, H],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  G extends keyof Schema[A][B][C][D][E][F],
+  H extends keyof Schema[A][B][C][D][E][F][G],
+  I extends keyof Schema[A][B][C][D][E][F][G][H],
+  Z extends keyof Schema[A][B][C][D][E][F][G][H][I],
+  R extends Schema[A][B][C][D][E][F][G][H][I][Z]
+>(
+  path: [A, B, C, D, E, F, G, H, I],
+): ValidPathForList<R>;
+export function validPathForList<
+  A extends keyof Schema,
+  B extends keyof Schema[A],
+  C extends keyof Schema[A][B],
+  D extends keyof Schema[A][B][C],
+  E extends keyof Schema[A][B][C][D],
+  F extends keyof Schema[A][B][C][D][E],
+  G extends keyof Schema[A][B][C][D][E][F],
+  H extends keyof Schema[A][B][C][D][E][F][G],
+  I extends keyof Schema[A][B][C][D][E][F][G][H],
+  J extends keyof Schema[A][B][C][D][E][F][G][H][I],
+  Z extends keyof Schema[A][B][C][D][E][F][G][H][I][J],
+  R extends Schema[A][B][C][D][E][F][G][H][I][J][Z]
+>(
+  path: [A, B, C, D, E, F, G, H, I, J],
+): ValidPathForList<R>;
+export function validPathForList(path: string[]): ValidPath<{}> {
+  return { path };
 }

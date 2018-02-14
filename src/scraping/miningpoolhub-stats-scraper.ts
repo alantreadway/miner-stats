@@ -55,7 +55,7 @@ export async function handler(event: {}, context: Context, callback: Callback): 
               amount: result.profit / 1000,
               currency: 'BTC',
             },
-            pool: 'MININGPOOLHUB',
+            pool: 'miningpoolhub',
             timestamp: getCurrentTimeInSeconds(),
             type: 'mining-pool-algo-profitability',
           },
