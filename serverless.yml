@@ -79,6 +79,12 @@ functions:
       - schedule:
           rate: ${self:custom.stage.${self:provider.stage}.scraperRate}
 
+  nanopoolApproximatedEarningsScraper:
+    handler: src/scraping/nanopool-approximated-earning-scraper.handler
+    events:
+      - schedule:
+          rate: ${self:custom.stage.${self:provider.stage}.scraperRate}
+
   dataUpdater:
     handler: src/data-updater/data-updater.handler
     events:
@@ -105,6 +111,11 @@ resources:
         RetentionInDays: 1
 
     NicehashPayingScraperLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: 1
+
+    NanopoolApproximatedEarningsScraperLogGroup:
       Type: AWS::Logs::LogGroup
       Properties:
         RetentionInDays: 1

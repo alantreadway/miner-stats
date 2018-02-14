@@ -32,7 +32,12 @@ module.exports = {
   target: 'node',
   module: {
     loaders: [
-      { test: /\.ts(x?)$/, loader: 'ts-loader' },
+      {
+        test: /\.ts(x?)$/,
+        loader: 'ts-loader',
+        // https://github.com/serverless-heaven/serverless-webpack/issues/299
+        options: { transpileOnly: true },
+      },
     ],
   },
   plugins: [

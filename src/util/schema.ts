@@ -155,17 +155,22 @@ export type AlgoPoolTree = {
 };
 
 export interface AlgoPoolCurrent extends PoolAlgoRecord {
-  pool: Pool;
+  pool: AlgoFocusedPool;
   algo: Algorithm;
 }
 
 export interface CoinPoolCurrent extends PoolAlgoRecord {
-  pool: Pool;
+  pool: CoinFocusedPool;
   coin: DigitalCurrency;
   algo: Algorithm;
 }
 
 export type PoolCurrent = AlgoPoolCurrent | CoinPoolCurrent;
+
+export function isCoinPoolCurrent(current: PoolCurrent): current is CoinPoolCurrent {
+  // tslint:disable-next-line:no-any
+  return (current as any).coin != null;
+}
 
 export interface Schema {
   v2: {
@@ -178,7 +183,7 @@ export interface Schema {
       // Set of all most recently scraped values, also acts as an index for the algo/coin sub-trees
       // to understand the full range of possible permutations of keys.
       latest: {
-        [pool in Pool]: PoolCurrent;
+        [uniqueId: string]: PoolCurrent;
       };
     };
     user: {
@@ -200,23 +205,23 @@ export interface ValidPathForList<R> {
 export function validPath<
   A extends keyof Schema,
   R extends Schema[A]
->(
-  key: [A],
+  >(
+    key: [A],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
   B extends keyof Schema[A],
   R extends Schema[A][B]
->(
-  key: [A, B],
+  >(
+    key: [A, B],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
   B extends keyof Schema[A],
   C extends keyof Schema[A][B],
   R extends Schema[A][B][C]
->(
-  key: [A, B, C],
+  >(
+    key: [A, B, C],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
@@ -224,8 +229,8 @@ export function validPath<
   C extends keyof Schema[A][B],
   D extends keyof Schema[A][B][C],
   R extends Schema[A][B][C][D]
->(
-  key: [A, B, C, D],
+  >(
+    key: [A, B, C, D],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
@@ -234,8 +239,8 @@ export function validPath<
   D extends keyof Schema[A][B][C],
   E extends keyof Schema[A][B][C][D],
   R extends Schema[A][B][C][D][E]
->(
-  key: [A, B, C, D, E],
+  >(
+    key: [A, B, C, D, E],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
@@ -245,8 +250,8 @@ export function validPath<
   E extends keyof Schema[A][B][C][D],
   F extends keyof Schema[A][B][C][D][E],
   R extends Schema[A][B][C][D][E][F]
->(
-  key: [A, B, C, D, E, F],
+  >(
+    key: [A, B, C, D, E, F],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
@@ -257,8 +262,8 @@ export function validPath<
   F extends keyof Schema[A][B][C][D][E],
   G extends keyof Schema[A][B][C][D][E][F],
   R extends Schema[A][B][C][D][E][F][G]
->(
-  key: [A, B, C, D, E, F, G],
+  >(
+    key: [A, B, C, D, E, F, G],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
@@ -270,8 +275,8 @@ export function validPath<
   G extends keyof Schema[A][B][C][D][E][F],
   H extends keyof Schema[A][B][C][D][E][F][G],
   R extends Schema[A][B][C][D][E][F][G][H]
->(
-  key: [A, B, C, D, E, F, G, H],
+  >(
+    key: [A, B, C, D, E, F, G, H],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
@@ -284,8 +289,8 @@ export function validPath<
   H extends keyof Schema[A][B][C][D][E][F][G],
   I extends keyof Schema[A][B][C][D][E][F][G][H],
   R extends Schema[A][B][C][D][E][F][G][H][I]
->(
-  key: [A, B, C, D, E, F, G, H, I],
+  >(
+    key: [A, B, C, D, E, F, G, H, I],
 ): ValidPath<R>;
 export function validPath<
   A extends keyof Schema,
@@ -299,8 +304,8 @@ export function validPath<
   I extends keyof Schema[A][B][C][D][E][F][G][H],
   J extends keyof Schema[A][B][C][D][E][F][G][H][I],
   R extends Schema[A][B][C][D][E][F][G][H][I][J]
->(
-  key: [A, B, C, D, E, F, G, H, I, J],
+  >(
+    key: [A, B, C, D, E, F, G, H, I, J],
 ): ValidPath<R>;
 export function validPath(path: string[]): ValidPath<{}> {
   return { path };
@@ -310,16 +315,16 @@ export function validPathForList<
   A extends keyof Schema,
   Z extends keyof Schema[A],
   R extends Schema[A][Z]
->(
-  path: [A],
+  >(
+    path: [A],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
   B extends keyof Schema[A],
   Z extends keyof Schema[A][B],
   R extends Schema[A][B][Z]
->(
-  path: [A, B],
+  >(
+    path: [A, B],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
@@ -327,8 +332,8 @@ export function validPathForList<
   C extends keyof Schema[A][B],
   Z extends keyof Schema[A][B][C],
   R extends Schema[A][B][C][Z]
->(
-  path: [A, B, C],
+  >(
+    path: [A, B, C],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
@@ -337,8 +342,8 @@ export function validPathForList<
   D extends keyof Schema[A][B][C],
   Z extends keyof Schema[A][B][C][D],
   R extends Schema[A][B][C][D][Z]
->(
-  path: [A, B, C, D],
+  >(
+    path: [A, B, C, D],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
@@ -348,8 +353,8 @@ export function validPathForList<
   E extends keyof Schema[A][B][C][D],
   Z extends keyof Schema[A][B][C][D][E],
   R extends Schema[A][B][C][D][E][Z]
->(
-  path: [A, B, C, D, E],
+  >(
+    path: [A, B, C, D, E],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
@@ -360,8 +365,8 @@ export function validPathForList<
   F extends keyof Schema[A][B][C][D][E],
   Z extends keyof Schema[A][B][C][D][E][F],
   R extends Schema[A][B][C][D][E][F][Z]
->(
-  path: [A, B, C, D, E, F],
+  >(
+    path: [A, B, C, D, E, F],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
@@ -373,8 +378,8 @@ export function validPathForList<
   G extends keyof Schema[A][B][C][D][E][F],
   Z extends keyof Schema[A][B][C][D][E][F][G],
   R extends Schema[A][B][C][D][E][F][G][Z]
->(
-  path: [A, B, C, D, E, F, G],
+  >(
+    path: [A, B, C, D, E, F, G],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
@@ -387,8 +392,8 @@ export function validPathForList<
   H extends keyof Schema[A][B][C][D][E][F][G],
   Z extends keyof Schema[A][B][C][D][E][F][G][H],
   R extends Schema[A][B][C][D][E][F][G][H][Z]
->(
-  path: [A, B, C, D, E, F, G, H],
+  >(
+    path: [A, B, C, D, E, F, G, H],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
@@ -402,8 +407,8 @@ export function validPathForList<
   I extends keyof Schema[A][B][C][D][E][F][G][H],
   Z extends keyof Schema[A][B][C][D][E][F][G][H][I],
   R extends Schema[A][B][C][D][E][F][G][H][I][Z]
->(
-  path: [A, B, C, D, E, F, G, H, I],
+  >(
+    path: [A, B, C, D, E, F, G, H, I],
 ): ValidPathForList<R>;
 export function validPathForList<
   A extends keyof Schema,
@@ -418,8 +423,8 @@ export function validPathForList<
   J extends keyof Schema[A][B][C][D][E][F][G][H][I],
   Z extends keyof Schema[A][B][C][D][E][F][G][H][I][J],
   R extends Schema[A][B][C][D][E][F][G][H][I][J][Z]
->(
-  path: [A, B, C, D, E, F, G, H, I, J],
+  >(
+    path: [A, B, C, D, E, F, G, H, I, J],
 ): ValidPathForList<R>;
 export function validPathForList(path: string[]): ValidPath<{}> {
   return { path };

@@ -50,15 +50,25 @@ async function processPoolProfitability(
   const flooredTimestamp = floorTimeToGranularity(up.timestamp, TimeGranularity.MINUTE) as
     keyof schema.PoolProfitability['per-minute'];
 
+  const uniqueKey = up.type === 'mining-pool-algo-profitability' ?
+    `${up.pool} - ${up.algorithm}` :
+    `${up.pool} - ${up.coin} - ${up.algorithm}`;
   await set<schema.PoolCurrent>(
-    schema.validPath(['v2', 'pool', 'latest', up.pool]),
-    {
-      algo: up.algorithm,
-      amount: up.currencyAmount,
-      coin: up.type === 'mining-pool-algo-profitability' ? undefined : up.coin,
-      pool: up.pool,
-      timestamp: up.timestamp,
-    },
+    schema.validPath(['v2', 'pool', 'latest', uniqueKey]),
+    up.type === 'mining-pool-algo-profitability' ?
+      {
+        algo: up.algorithm,
+        amount: up.currencyAmount,
+        pool: up.pool,
+        timestamp: up.timestamp,
+      } :
+      {
+        algo: up.algorithm,
+        amount: up.currencyAmount,
+        coin: up.coin,
+        pool: up.pool,
+        timestamp: up.timestamp,
+      },
   );
 
   let minutePath: schema.ValidPath<schema.PoolAlgoRecord>;
@@ -76,11 +86,7 @@ async function processPoolProfitability(
     amount: up.currencyAmount,
     timestamp: flooredTimestamp,
   };
-  if (up.type === 'mining-pool-algo-profitability') {
-    await setWithPriority(minutePath, record, flooredTimestamp, context);
-  } else {
-    await setWithPriority(minutePath, record, flooredTimestamp, context);
-  }
+  await setWithPriority(minutePath, record, flooredTimestamp, context);
 
   for (const period of [TimeGranularity.HOUR, TimeGranularity.DAY]) {
     const periodName = `per-${TimeGranularity[period].toLowerCase()}` as 'per-hour' | 'per-day';

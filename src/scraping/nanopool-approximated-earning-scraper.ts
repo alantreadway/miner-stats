@@ -18,8 +18,9 @@ const NANOPOOL_COINS: {[key in schema.DigitalCurrency]?: schema.Algorithm} = {
   XMR: 'cryptonight',
   ZEC: 'equihash',
 };
-function nanopoolUrl(coin: keyof typeof NANOPOOL_COINS): string {
-  const algo = NANOPOOL_COINS[coin]!;
+function nanopoolUrl(key: keyof typeof NANOPOOL_COINS): string {
+  const algo = NANOPOOL_COINS[key]!;
+  const coin = key.toLowerCase();
   // All prices expected to be in MH/s.
   const hashRateMultiplier = HashRate.MH / ALGORITHM_METADATA[algo].hashRateMultiplier.nanopool;
   return `https://api.nanopool.org/v1/${coin}/approximated_earnings/${hashRateMultiplier}`;

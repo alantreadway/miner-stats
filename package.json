@@ -28,6 +28,7 @@
     "faker": "^4.1.0",
     "firebase-tools": "^3.17.4",
     "jest": "^22.1.4",
+    "serverless": "^1.26.0",
     "serverless-kms-secrets": "^1.0.2",
     "serverless-offline": "^3.16.0",
     "serverless-offline-scheduler": "^0.3.3",
