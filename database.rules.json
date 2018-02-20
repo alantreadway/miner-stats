@@ -18,23 +18,25 @@
           ".write": "$uid === auth.uid",
           "defaults": {
             "rig-profile": {
-              ".validate": "data.isString()"
+              ".validate": "newData.isString() && data.parent().parent().child('rig-profile').child(newData.val()).exists()"
             },
             "$other": {
               ".validate": false
             }
           },
           "rig-profile": {
-            "$name": {
-              ".validate": "$name.length < 50",
-              "$algo": {
-                ".validate": "root.child('/v1/algorithms/$algo').exists()",
-                "hash-rate": {
-                  ".validate": "data.isNumber()"
-                },
-                "$other": {
-                  ".validate": false
+            "$uuid": {
+              ".validate": "$uuid.length < 50",
+              "name": {
+                ".validate": "newData.isString() && newData.val().length < 50"
+              },
+              "hashrates": {
+                "$algo": {
+                  ".validate": "root.child('v2/algorithm').child($algo).exists() && newData.isNumber()"
                 }
+              },
+              "$other": {
+                ".validate": false
               }
             }
           },
