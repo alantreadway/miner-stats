@@ -1,7 +1,7 @@
 import { Callback, Context } from 'aws-lambda';
 
 import { CONFIG } from 'config';
-import { Algorithm, isAlgorithm } from 'model/algorithm';
+import { Algorithm, ALGORITHM_METADATA, HashRate, isAlgorithm } from 'model/algorithm';
 import { MiningPoolAlgorithmProfitability } from 'model/data-update';
 import { LOGGER } from 'util/bunyan';
 import { getCurrentTimeInSeconds } from 'util/date';
@@ -41,11 +41,15 @@ export async function handler(event: {}, context: Context, callback: Callback): 
             return;
           }
 
+          // All prices expected to be in MH/s.
+          const hashRateMultiplier =
+            HashRate.MH / ALGORITHM_METADATA[algo].hashRateMultiplier.nicehash;
+
           const sendResult = await send<MiningPoolAlgorithmProfitability>(
             {
               algorithm: algo,
               currencyAmount: {
-                amount: Number(result.paying) / 1000,
+                amount: Number(result.paying) * hashRateMultiplier,
                 currency: 'BTC',
               },
               pool: 'nicehash',

@@ -12,7 +12,7 @@
     "test:watch": "jest --watch --notify",
     "deploy": "serverless deploy -s ${ENV} -v && firebase deploy",
     "deploy:data:algorithms": "echo $(ts-node tools/generate-firebase-algorithms.ts) > ./algorithms.json; firebase database:set /v2/algorithm ./algorithms.json",
-    "deploy:data:profiles": "firebase database:set /v2/rig-profile ./rig-profiles.json"
+    "deploy:data:profiles": "firebase database:set /v2/rig-profile ./rig-profiles.json && firebase database:set /v2/user/D0c7UVQrCCWGEEZ8BKEc8marUkg1/rig-profile/test ./personal-rig-profile.json"
   },
   "devDependencies": {
     "@types/aws-lambda": "0.0.22",

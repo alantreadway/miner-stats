@@ -21,9 +21,9 @@ export interface AlgorithmMetadata<T extends schema.Algorithm> {
 function buildAlgorithmMetadata<T extends schema.Algorithm>(algo: T): AlgorithmMetadata<T> {
   let hashRateMultiplier: AlgorithmMetadata<'blake2s'>['hashRateMultiplier'] = {
     ahashpool: HashRate.MH,
-    miningpoolhub: HashRate.MH,
+    miningpoolhub: HashRate.GH,
     nanopool: HashRate.MH,
-    nicehash: HashRate.MH,
+    nicehash: HashRate.GH,
   };
   switch (algo) {
     case 'blake2s':
