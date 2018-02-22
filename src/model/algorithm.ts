@@ -28,6 +28,9 @@ function buildAlgorithmMetadata<T extends schema.Algorithm>(algo: T): AlgorithmM
   switch (algo) {
     case 'blake2s':
     case 'blakecoin':
+    case 'quark':
+    case 'qubit':
+    case 'x11':
       hashRateMultiplier.ahashpool = HashRate.GH;
       break;
 
