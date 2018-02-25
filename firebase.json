@@ -1,5 +1,17 @@
 {
   "database": {
     "rules": "database.rules.json"
+  },
+  "functions": {
+    "source": ".firebase",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/bower_modules/**",
+      "**/output/**",
+      "**/src/**",
+      "**/__tests__/**"
+    ]
   }
 }

@@ -5,14 +5,18 @@
   "main": "handler.js",
   "scripts": {
     "lint": "tslint -p .",
-    "build": "serverless webpack",
+    "build:serverless": "serverless webpack",
+    "build:firebase": "rm -rf .firebase && webpack --config src/firebase/webpack.config.js && cp -R src/firebase/package.json .firebase/",
+    "build": "run-p build:**",
     "start": "serverless offline start --color -s local --location .webpack/service | bunyan -o short",
     "test": "jest --notify",
     "test:ci": "JEST_JUNIT_OUTPUT=test_output/junit.xml jest --ci --coverage --testResultsProcessor=\"jest-junit\"",
     "test:watch": "jest --watch --notify",
-    "deploy": "serverless deploy -s ${ENV} -v && firebase deploy",
-    "deploy:data:algorithms": "echo $(ts-node tools/generate-firebase-algorithms.ts) > ./algorithms.json; firebase database:set /v2/algorithm ./algorithms.json",
-    "deploy:data:profiles": "firebase database:set /v2/rig-profile ./rig-profiles.json && firebase database:set /v2/user/D0c7UVQrCCWGEEZ8BKEc8marUkg1/rig-profile/test ./personal-rig-profile.json"
+    "deploy:serverless": "serverless deploy -s ${ENV} -v",
+    "deploy:firebase": "firebase deploy",
+    "deploy:firebase:algorithms": "echo $(ts-node tools/generate-firebase-algorithms.ts) > ./algorithms.json; firebase database:set /v2/algorithm ./algorithms.json",
+    "deploy:firebase:profiles": "firebase database:set /v2/rig-profile ./rig-profiles.json && firebase database:set /v2/user/D0c7UVQrCCWGEEZ8BKEc8marUkg1/rig-profile/test ./personal-rig-profile.json",
+    "deploy": "run-s deploy:serverless deploy:firebase deploy:firebase:**"
   },
   "devDependencies": {
     "@types/aws-lambda": "0.0.22",
@@ -29,6 +33,7 @@
     "faker": "^4.1.0",
     "firebase-tools": "^3.17.4",
     "jest": "^22.1.4",
+    "npm-run-all": "^4.1.2",
     "serverless": "^1.26.0",
     "serverless-kms-secrets": "^1.0.2",
     "serverless-offline": "^3.16.0",
@@ -51,6 +56,7 @@
     "bunyan": "^1.8.12",
     "bunyan-sentry-stream": "^1.2.1",
     "firebase-admin": "^5.8.2",
+    "firebase-functions": "^0.8.1",
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.4",
     "raven": "^2.4.0",

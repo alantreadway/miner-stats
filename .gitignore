@@ -8,3 +8,6 @@ node_modules
 
 # Webpack directories
 .webpack
+
+# Build artifacts.
+.firebase
