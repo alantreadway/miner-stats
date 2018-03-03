@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "src/",
+    "outDir": ".firebase/",
     "sourceMap": true,
     "strict": true,
     "removeComments": true,

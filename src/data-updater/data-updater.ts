@@ -53,23 +53,24 @@ async function processPoolProfitability(
   const uniqueKey = up.type === 'mining-pool-algo-profitability' ?
     `${up.pool} - ${up.algorithm}` :
     `${up.pool} - ${up.coin} - ${up.algorithm}`;
-  await set<schema.PoolCurrent>(
-    schema.validPath(['v2', 'pool', 'latest', uniqueKey]),
-    up.type === 'mining-pool-algo-profitability' ?
-      {
-        algo: up.algorithm,
-        amount: up.currencyAmount,
-        pool: up.pool,
-        timestamp: up.timestamp,
-      } :
-      {
-        algo: up.algorithm,
-        amount: up.currencyAmount,
-        coin: up.coin,
-        pool: up.pool,
-        timestamp: up.timestamp,
-      },
-  );
+  const current: schema.PoolCurrent = up.type === 'mining-pool-algo-profitability' ?
+    {
+      algo: up.algorithm,
+      amount: up.currencyAmount,
+      pool: up.pool,
+      timestamp: up.timestamp,
+    } :
+    {
+      algo: up.algorithm,
+      amount: up.currencyAmount,
+      coin: up.coin,
+      pool: up.pool,
+      timestamp: up.timestamp,
+    };
+  if (up.poolWorkerProportion != null) {
+    current.poolWorkerProportion = up.poolWorkerProportion;
+  }
+  await set(schema.validPath(['v2', 'pool', 'latest', uniqueKey]), current);
 
   let minutePath: schema.ValidPath<schema.PoolAlgoRecord>;
   if (up.type === 'mining-pool-algo-profitability') {

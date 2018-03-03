@@ -41,6 +41,14 @@ export async function handler(event: {}, context: Context, callback: Callback): 
       'Metrics retrieved.',
     );
 
+    const totalWorkers = Object.keys(response)
+      .reduce(
+        (total, algo) => {
+          return total + response[algo].workers;
+        },
+        0,
+      );
+
     await Promise.all(
       Object.keys(response)
         .map(async (algo) => {
@@ -62,6 +70,7 @@ export async function handler(event: {}, context: Context, callback: Callback): 
                 currency: 'BTC',
               },
               pool: 'ahashpool',
+              poolWorkerProportion: result.workers / totalWorkers,
               timestamp: getCurrentTimeInSeconds(),
               type: 'mining-pool-algo-profitability',
             },

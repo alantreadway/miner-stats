@@ -11,6 +11,7 @@ export interface MiningPoolAlgorithmProfitability {
   pool: schema.AlgoFocusedPool;
   algorithm: schema.Algorithm;
   currencyAmount: schema.DigitalCurrencyAmount;
+  poolWorkerProportion?: number;
 }
 
 export interface MiningPoolCoinProfitability {
@@ -21,6 +22,7 @@ export interface MiningPoolCoinProfitability {
   coin: schema.DigitalCurrency;
   algorithm: schema.Algorithm;
   currencyAmount: schema.DigitalCurrencyAmount;
+  poolWorkerProportion?: number;
 }
 
 export interface MiningPoolBalance {
