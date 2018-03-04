@@ -24,6 +24,35 @@
               ".validate": false
             }
           },
+          "pool-wallets": {
+            "ahashpool": {
+              "BTC": {
+                  ".validate": "newData.isString() && newData.val().length === 34"
+              },
+              "$other": {
+                ".validate": false
+              }
+            },
+            "miningpoolhub": {
+              "BTC": {
+                ".validate": "newData.isString() && newData.val().length === 64"
+              },
+              "$other": {
+                ".validate": false
+              }
+            },
+            "nicehash": {
+              "BTC": {
+                ".validate": "newData.isString() && newData.val().length === 34"
+              },
+              "$other": {
+                ".validate": false
+              }
+            },
+            "$other": {
+              ".validate": false
+            }
+          },
           "rig-profile": {
             "$uuid": {
               ".validate": "$uuid.length < 50",

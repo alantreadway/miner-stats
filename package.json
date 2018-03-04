@@ -16,6 +16,7 @@
     "deploy:firebase": "firebase deploy",
     "deploy:firebase:algorithms": "echo $(ts-node tools/generate-firebase-algorithms.ts) > ./algorithms.json; firebase database:set /v2/algorithm ./algorithms.json",
     "deploy:firebase:profiles": "firebase database:set /v2/rig-profile ./rig-profiles.json && firebase database:set /v2/user/D0c7UVQrCCWGEEZ8BKEc8marUkg1/rig-profile/test ./personal-rig-profile.json",
+    "deploy:firebase:wallets": "firebase database:set /v2/user/D0c7UVQrCCWGEEZ8BKEc8marUkg1/pool-wallet ./personal-pool-wallet.json",
     "deploy": "run-s deploy:serverless deploy:firebase deploy:firebase:**"
   },
   "devDependencies": {
