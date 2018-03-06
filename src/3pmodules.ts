@@ -10,13 +10,13 @@ declare module 'bunyan-sentry-stream' {
   export = bunyanSentryStream;
 }
 
-// declare module 'serverless-http' {
-//   import * as lambda from 'aws-lambda';
-//   import * as express from 'express';
+declare module 'serverless-http' {
+  import * as lambda from 'aws-lambda';
+  import * as express from 'express';
 
-//   function serverless(
-//     app: express.Application,
-//   ): (e: lambda.APIGatewayEvent, c: lambda.Context, cb: lambda.Callback) => void;
+  function serverless(
+    app: express.Application,
+  ): (e: lambda.APIGatewayEvent, c: lambda.Context, cb: lambda.Callback) => void;
 
-//   export = serverless;
-// }
+  export = serverless;
+}

@@ -8,6 +8,7 @@ plugins:
   - serverless-offline-scheduler
   - serverless-offline-sns
   - serverless-kms-secrets
+  # - serverless-domain-manager
 
 custom:
   common:
@@ -18,10 +19,12 @@ custom:
       sentryDSN: N/A
       snsEndpoint: http://localhost:${self:custom.serverless-offline-sns.port}
       scraperRate: rate(1 minute)
+      corsOrigin: '*'
     dev:
       sentryDSN: N/A
       snsEndpoint: N/A
       scraperRate: rate(5 minutes)
+      corsOrigin: '*'
   serverless-offline:
     location: ${opt:location, ''} # Fix serverless-offline-sns + Webpack.
   serverless-offline-sns:
@@ -56,6 +59,7 @@ provider:
     SENTRY_DSN: ${self:custom.stage.${self:provider.stage}.sentryDSN}
     SERVERLESS_STAGE_NAME: ${self:provider.stage}
     SNS_ENDPOINT: ${self:custom.stage.${self:provider.stage}.snsEndpoint}
+    CORS_ORIGIN: ${self:custom.stage.${self:provider.stage}.corsOrigin}
 
 package:
   individually: true
@@ -91,6 +95,20 @@ functions:
       - sns:
           arn: ${self:provider.environment.DATA_UPDATE_SNS_ARN}
 
+  balanceEndpoint:
+    handler: src/balance-endpoint/index.handler
+    timeout: 10
+    events:
+      - http:
+          path: balance/{pool}/{currency}
+          cors: true
+          method: get
+          request:
+            parameters:
+              paths:
+                pool: true
+                currency: true
+
 # See common overrides for defaults here:
 # https://serverless.com/framework/docs/providers/aws/guide/resources/
 resources:
@@ -121,6 +139,11 @@ resources:
         RetentionInDays: 1
 
     DataUpdaterLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: 1
+
+    BalanceEndpointLogGroup:
       Type: AWS::Logs::LogGroup
       Properties:
         RetentionInDays: 1

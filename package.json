@@ -36,6 +36,7 @@
     "jest": "^22.1.4",
     "npm-run-all": "^4.1.2",
     "serverless": "^1.26.0",
+    "serverless-domain-manager": "^2.3.4",
     "serverless-kms-secrets": "^1.0.2",
     "serverless-offline": "^3.16.0",
     "serverless-offline-scheduler": "^0.3.3",
@@ -61,7 +62,8 @@
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.4",
     "raven": "^2.4.0",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.5",
+    "serverless-http": "^1.5.3"
   },
   "jest": {
     "moduleFileExtensions": [

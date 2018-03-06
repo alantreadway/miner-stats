@@ -29,6 +29,7 @@ interface SecretsFile {
 let loadedSecrets: SecretsFile | undefined;
 
 export const CONFIG = {
+  corsOrigin: required('CORS_ORIGIN'),
   dataUpdateSnsArn: required('DATA_UPDATE_SNS_ARN'),
   firebase: {
     credentials: async (): Promise<Base64EncodedSecretString> => {
