@@ -24,6 +24,27 @@
               ".validate": false
             }
           },
+          "bookmarks": {
+            "pools": {
+              "$index": {
+                "pool": {
+                  ".validate": "newData.isString() && newData.val().length < 15"
+                },
+                "coin": {
+                  ".validate": "newData.isString() && newData.val().length < 10"
+                },
+                "algo": {
+                  ".validate": "newData.isString() && root.child('v2/algorithm').child(newData.val()).exists()"
+                },
+                "$other": {
+                  ".validate": false
+                }
+              }
+            },
+            "$other": {
+              ".validate": false
+            }
+          },
           "pool-wallets": {
             "ahashpool": {
               "BTC": {
