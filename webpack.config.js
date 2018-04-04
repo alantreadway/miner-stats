@@ -6,6 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
   entry: slsw.lib.entries,
   devtool: 'eval',
+  mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
   externals: [
     'aws-sdk',
     'aws-lambda',
@@ -31,12 +32,14 @@ module.exports = {
   },
   target: 'node',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts(x?)$/,
-        loader: 'ts-loader',
-        // https://github.com/serverless-heaven/serverless-webpack/issues/299
-        options: { transpileOnly: true },
+        use: {
+          loader: 'ts-loader',
+          // https://github.com/serverless-heaven/serverless-webpack/issues/299
+          options: { transpileOnly: true }
+        },
       },
     ],
   },

@@ -20,13 +20,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-        options: {
-          transpileOnly: true
-        }
-      }
-    ]
+        test: /\.ts(x?)$/,
+        use: {
+          loader: 'ts-loader',
+          // https://github.com/serverless-heaven/serverless-webpack/issues/299
+          options: { transpileOnly: true }
+        },
+      },
+    ],
   },
   // resolve: {
   //   mainFields: ['main'],

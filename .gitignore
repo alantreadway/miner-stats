@@ -11,3 +11,5 @@ node_modules
 
 # Build artifacts.
 .firebase
+personal-pool-wallet.json
+yarn-error.log

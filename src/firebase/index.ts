@@ -6,13 +6,13 @@ import { TimeGranularity } from 'util/time-series';
 
 /* tslint:disable:no-console */
 
-firebase.initializeApp(functions.config().firebase);
+firebase.initializeApp();
 
 export const cleanupOnAlgoPoolTimeseriesAddition = functions.database.ref(
   '/v2/pool/algo/{pool}/{algo}/profitability/{timeRange}/{timestamp}',
 )
-  .onCreate(async (event) => {
-    const params = event.params!;
+  .onCreate(async (data, context) => {
+    const params = context!.params!;
     const timestamp = Number(params.timestamp);
 
     let rangeToKeep: number | undefined = undefined;
@@ -42,8 +42,8 @@ export const cleanupOnAlgoPoolTimeseriesAddition = functions.database.ref(
 export const cleanupOnCoinPoolTimeseriesAddition = functions.database.ref(
   '/v2/pool/coin/{pool}/{coin}/{algo}/profitability/{timeRange}/{timestamp}',
 )
-  .onCreate(async (event) => {
-    const params = event.params!;
+  .onCreate(async (data, context) => {
+    const params = context!.params!;
     const timestamp = Number(params.timestamp);
 
     let rangeToKeep: number | undefined = undefined;
