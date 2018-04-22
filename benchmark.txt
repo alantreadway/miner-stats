@@ -1,0 +1,1213 @@
+*** ccminer 2.2.4 for nVidia GPUs by tpruvot@github ***
+    Built with the nVidia CUDA Toolkit 9.0 64-bits
+
+  Originally based on Christian Buchner and Christian H. project
+  Include some kernels from alexis78, djm34, djEzo, tsiv and krnlx.
+
+BTC donation address: 1AJdfCpLWPNoAMDfHF1wD5y8VgKSSTHxPo (tpruvot)
+
+[2018-04-22 12:46:17][36m Starting benchmark mode with blakecoin[0m
+[2018-04-22 12:46:18] NVML GPU monitoring enabled.[0m
+[2018-04-22 12:46:18] 5 miner threads started, using 'blakecoin' algorithm.[0m
+[2018-04-22 12:46:19] GPU #1: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:19] GPU #0: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:19] GPU #2: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:19] GPU #4: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:19] GPU #3: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:20] GPU #2: ASUS GTX 1070, 3974.08 MH/s[0m
+[2018-04-22 12:46:20] GPU #0: GeForce GTX 1070 Ti, 5004.45 MH/s[0m
+[2018-04-22 12:46:20] GPU #1: MSI GTX 1070 Ti, 5011.60 MH/s[0m
+[2018-04-22 12:46:21] GPU #3: PNY GTX 1070, 3970.17 MH/s[0m
+[2018-04-22 12:46:22] GPU #4: GeForce GTX 1070 Ti, 5007.95 MH/s[0m
+[2018-04-22 12:46:22][01;37m GPU #2: blakecoin hashrate = 3963.44 MH/s[0m
+[2018-04-22 12:46:22][01;37m GPU #1: blakecoin hashrate = 5009.58 MH/s[0m
+[2018-04-22 12:46:22][01;37m GPU #0: blakecoin hashrate = 5168.62 MH/s[0m
+[2018-04-22 12:46:22][01;37m GPU #4: blakecoin hashrate = 5005.59 MH/s[0m
+[2018-04-22 12:46:22][01;37m GPU #3: blakecoin hashrate = 4040.67 MH/s[0m
+[2018-04-22 12:46:23][36m Benchmark algo blake...[0m
+[2018-04-22 12:46:25] GPU #0: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:25] GPU #2: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:25] GPU #3: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:25] GPU #4: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:25] GPU #1: Intensity set to 30, 1073741824 cuda threads[0m
+[2018-04-22 12:46:25] GPU #0: GeForce GTX 1070 Ti, 2920.09 MH/s[0m
+[2018-04-22 12:46:26] GPU #2: ASUS GTX 1070, 2273.86 MH/s[0m
+[2018-04-22 12:46:27] GPU #3: PNY GTX 1070, 2286.30 MH/s[0m
+[2018-04-22 12:46:28] GPU #1: MSI GTX 1070 Ti, 2890.82 MH/s[0m
+[2018-04-22 12:46:29] GPU #4: GeForce GTX 1070 Ti, 2929.69 MH/s[0m
+[2018-04-22 12:46:29][01;37m GPU #1: blake hashrate = 2773.87 MH/s[0m
+[2018-04-22 12:46:29][01;37m GPU #0: blake hashrate = 2915.36 MH/s[0m
+[2018-04-22 12:46:29][01;37m GPU #2: blake hashrate = 2181.75 MH/s[0m
+[2018-04-22 12:46:29][01;37m GPU #4: blake hashrate = 2892.19 MH/s[0m
+[2018-04-22 12:46:29][01;37m GPU #3: blake hashrate = 2228.48 MH/s[0m
+[2018-04-22 12:46:30][36m Benchmark algo blake2s...[0m
+[2018-04-22 12:46:30] GPU #0: Intensity set to 28, 268435456 cuda threads[0m
+[2018-04-22 12:46:31] GPU #2: Intensity set to 28, 268435456 cuda threads[0m
+[2018-04-22 12:46:31] GPU #3: Intensity set to 28, 268435456 cuda threads[0m
+[2018-04-22 12:46:31] GPU #4: Intensity set to 28, 268435456 cuda threads[0m
+[2018-04-22 12:46:31] GPU #1: Intensity set to 28, 268435456 cuda threads[0m
+[2018-04-22 12:46:32] GPU #0: GeForce GTX 1070 Ti, 4567.04 MH/s[0m
+[2018-04-22 12:46:32] GPU #2: ASUS GTX 1070, 3600.42 MH/s[0m
+[2018-04-22 12:46:33] GPU #4: GeForce GTX 1070 Ti, 4546.13 MH/s[0m
+[2018-04-22 12:46:33] GPU #3: PNY GTX 1070, 3565.18 MH/s[0m
+[2018-04-22 12:46:33] GPU #1: MSI GTX 1070 Ti, 4465.98 MH/s[0m
+[2018-04-22 12:46:33][01;37m GPU #1: blake2s hashrate = 4495.08 MH/s[0m
+[2018-04-22 12:46:33][01;37m GPU #0: blake2s hashrate = 4550.11 MH/s[0m
+[2018-04-22 12:46:33][01;37m GPU #2: blake2s hashrate = 3599.18 MH/s[0m
+[2018-04-22 12:46:33][01;37m GPU #4: blake2s hashrate = 4551.89 MH/s[0m
+[2018-04-22 12:46:33][01;37m GPU #3: blake2s hashrate = 3585.19 MH/s[0m
+[2018-04-22 12:46:35][36m Benchmark algo bmw...[0m
+[2018-04-22 12:46:35] GPU #2: Intensity set to 21, 2097152 cuda threads[0m
+[2018-04-22 12:46:35] GPU #1: Intensity set to 21, 2097152 cuda threads[0m
+[2018-04-22 12:46:35] GPU #3: Intensity set to 21, 2097152 cuda threads[0m
+[2018-04-22 12:46:35] GPU #0: Intensity set to 21, 2097152 cuda threads[0m
+[2018-04-22 12:46:36] GPU #4: Intensity set to 21, 2097152 cuda threads[0m
+[2018-04-22 12:46:37] GPU #2: ASUS GTX 1070, 1557.13 MH/s[0m
+[2018-04-22 12:46:37] GPU #1: MSI GTX 1070 Ti, 1979.91 MH/s[0m
+[2018-04-22 12:46:38] GPU #4: GeForce GTX 1070 Ti, 2015.37 MH/s[0m
+[2018-04-22 12:46:38] GPU #0: GeForce GTX 1070 Ti, 1992.36 MH/s[0m
+[2018-04-22 12:46:38] GPU #3: PNY GTX 1070, 1573.78 MH/s[0m
+[2018-04-22 12:46:39][01;37m GPU #3: bmw hashrate = 1551.77 MH/s[0m
+[2018-04-22 12:46:39][01;37m GPU #1: bmw hashrate = 2001.78 MH/s[0m
+[2018-04-22 12:46:39][01;37m GPU #2: bmw hashrate = 1534.96 MH/s[0m
+[2018-04-22 12:46:39][01;37m GPU #4: bmw hashrate = 2011.37 MH/s[0m
+[2018-04-22 12:46:39][01;37m GPU #0: bmw hashrate = 2018.44 MH/s[0m
+[2018-04-22 12:46:41][36m Benchmark algo bastion...[0m
+[2018-04-22 12:46:41] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:46:41] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:46:41] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:46:41] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:46:42] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:46:42] GPU #0: GeForce GTX 1070 Ti, 13.79 MH/s[0m
+[2018-04-22 12:46:42] GPU #4: GeForce GTX 1070 Ti, 13.43 MH/s[0m
+[2018-04-22 12:46:43] GPU #1: MSI GTX 1070 Ti, 12.70 MH/s[0m
+[2018-04-22 12:46:43] GPU #2: ASUS GTX 1070, 10.29 MH/s[0m
+[2018-04-22 12:46:43] GPU #3: PNY GTX 1070, 10.29 MH/s[0m
+[2018-04-22 12:46:48] GPU #2: ASUS GTX 1070, 10.76 MH/s[0m
+[2018-04-22 12:46:48] GPU #1: MSI GTX 1070 Ti, 13.10 MH/s[0m
+[2018-04-22 12:46:48] GPU #3: PNY GTX 1070, 10.79 MH/s[0m
+[2018-04-22 12:46:50] GPU #4: GeForce GTX 1070 Ti, 13.31 MH/s[0m
+[2018-04-22 12:46:50] GPU #0: GeForce GTX 1070 Ti, 13.31 MH/s[0m
+[2018-04-22 12:46:50][01;37m GPU #2: bastion hashrate = 10.76 MH/s[0m
+[2018-04-22 12:46:50][01;37m GPU #4: bastion hashrate = 13.31 MH/s[0m
+[2018-04-22 12:46:50][01;37m GPU #0: bastion hashrate = 13.31 MH/s[0m
+[2018-04-22 12:46:50][01;37m GPU #1: bastion hashrate = 13.10 MH/s[0m
+[2018-04-22 12:46:50][01;37m GPU #3: bastion hashrate = 10.79 MH/s[0m
+[2018-04-22 12:46:50] GPU #0: 1754 MHz 0.00 H/W 55W 50C FAN 16%[0m
+[2018-04-22 12:46:51][36m Benchmark algo deep...[0m
+[2018-04-22 12:46:51] GPU #3: Intensity set to 19, 524288 cuda threads[0m
+[2018-04-22 12:46:51] GPU #2: Intensity set to 19, 524288 cuda threads[0m
+[2018-04-22 12:46:51] GPU #4: Intensity set to 19, 524288 cuda threads[0m
+[2018-04-22 12:46:52] GPU #0: Intensity set to 19, 524288 cuda threads[0m
+[2018-04-22 12:46:52] GPU #1: Intensity set to 19, 524288 cuda threads[0m
+[2018-04-22 12:46:53] GPU #3: PNY GTX 1070, 34.87 MH/s[0m
+[2018-04-22 12:46:53] GPU #2: ASUS GTX 1070, 34.80 MH/s[0m
+[2018-04-22 12:46:53] GPU #1: MSI GTX 1070 Ti, 43.33 MH/s[0m
+[2018-04-22 12:47:00] GPU #0: GeForce GTX 1070 Ti, 44.53 MH/s[0m
+[2018-04-22 12:47:00] GPU #4: GeForce GTX 1070 Ti, 44.23 MH/s[0m
+[2018-04-22 12:47:00] GPU #3: PNY GTX 1070, 34.69 MH/s[0m
+[2018-04-22 12:47:00] GPU #2: ASUS GTX 1070, 34.79 MH/s[0m
+[2018-04-22 12:47:00] GPU #1: MSI GTX 1070 Ti, 43.49 MH/s[0m
+[2018-04-22 12:47:00][01;37m GPU #3: deep hashrate = 34.69 MH/s[0m
+[2018-04-22 12:47:00][01;37m GPU #1: deep hashrate = 43.49 MH/s[0m
+[2018-04-22 12:47:00][01;37m GPU #4: deep hashrate = 44.23 MH/s[0m
+[2018-04-22 12:47:00][01;37m GPU #2: deep hashrate = 34.79 MH/s[0m
+[2018-04-22 12:47:00][01;37m GPU #0: deep hashrate = 44.53 MH/s[0m
+[2018-04-22 12:47:00] GPU #1: 1833 MHz 0.00 H/W 110W 56C FAN 0%[0m
+[2018-04-22 12:47:01][36m Benchmark algo decred...[0m
+[2018-04-22 12:47:02] GPU #0: Intensity set to 29, 536870912 cuda threads[0m
+[2018-04-22 12:47:02] GPU #3: Intensity set to 29, 536870912 cuda threads[0m
+[2018-04-22 12:47:02] GPU #1: Intensity set to 29, 536870912 cuda threads[0m
+[2018-04-22 12:47:04] GPU #0: GeForce GTX 1070 Ti, 3061.42 MH/s[0m
+[2018-04-22 12:47:05] GPU #2: Intensity set to 29, 536870912 cuda threads[0m
+[2018-04-22 12:47:05] GPU #4: Intensity set to 29, 536870912 cuda threads[0m
+[2018-04-22 12:47:07] GPU #3: PNY GTX 1070, 2372.40 MH/s[0m
+[2018-04-22 12:47:09] GPU #1: MSI GTX 1070 Ti, 2980.37 MH/s[0m
+[2018-04-22 12:47:11] GPU #2: ASUS GTX 1070, 2343.81 MH/s[0m
+[2018-04-22 12:47:12] GPU #2: 1640 MHz 28.69 MH/W 81W 59C FAN 25%[0m
+[2018-04-22 12:47:14] GPU #4: GeForce GTX 1070 Ti, 3072.13 MH/s[0m
+[2018-04-22 12:47:15][01;37m GPU #0: decred hashrate = 3062.77 MH/s[0m
+[2018-04-22 12:47:15][01;37m GPU #4: decred hashrate = 3005.78 MH/s[0m
+[2018-04-22 12:47:15][01;37m GPU #1: decred hashrate = 2980.41 MH/s[0m
+[2018-04-22 12:47:15][01;37m GPU #3: decred hashrate = 2371.37 MH/s[0m
+[2018-04-22 12:47:15][01;37m GPU #2: decred hashrate = 2341.87 MH/s[0m
+[2018-04-22 12:47:17][36m Benchmark algo equihash...[0m
+[2018-04-22 12:47:24] GPU #1: MSI GTX 1070 Ti, 346.15 Sol/s[0m
+[2018-04-22 12:47:36] GPU #2: ASUS GTX 1070, 329.72 Sol/s[0m
+[2018-04-22 12:47:41] GPU #1: MSI GTX 1070 Ti, 347.99 Sol/s[0m
+[2018-04-22 12:47:41] GPU #2: ASUS GTX 1070, 317.57 Sol/s[0m
+[2018-04-22 12:47:48] GPU #3: PNY GTX 1070, 314.47 Sol/s[0m
+[2018-04-22 12:47:51] GPU #4: GeForce GTX 1070 Ti, 369.78 Sol/s[0m
+[2018-04-22 12:47:54] GPU #3: PNY GTX 1070, 315.20 Sol/s[0m
+[2018-04-22 12:47:54] GPU #3: 1747 MHz 3.84 Sol/W 82W 56C FAN 35%[0m
+[2018-04-22 12:47:59] GPU #4: GeForce GTX 1070 Ti, 371.49 Sol/s[0m
+[2018-04-22 12:48:02] GPU #0: GeForce GTX 1070 Ti, 391.80 Sol/s[0m
+[2018-04-22 12:48:13] GPU #0: GeForce GTX 1070 Ti, 383.81 Sol/s[0m
+[2018-04-22 12:48:13][01;37m GPU #2: equihash hashrate = 317.57 Sol/s[0m
+[2018-04-22 12:48:13][01;37m GPU #0: equihash hashrate = 383.81 Sol/s[0m
+[2018-04-22 12:48:13][01;37m GPU #1: equihash hashrate = 347.99 Sol/s[0m
+[2018-04-22 12:48:13][01;37m GPU #3: equihash hashrate = 315.20 Sol/s[0m
+[2018-04-22 12:48:13][01;37m GPU #4: equihash hashrate = 371.49 Sol/s[0m
+[2018-04-22 12:48:14] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:15][36m Benchmark algo fresh...[0m
+[2018-04-22 12:48:15] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:15] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:15] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:15] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:16] GPU #1: MSI GTX 1070 Ti, 17.36 MH/s[0m
+[2018-04-22 12:48:16] GPU #2: ASUS GTX 1070, 14.93 MH/s[0m
+[2018-04-22 12:48:16] GPU #4: GeForce GTX 1070 Ti, 17.54 MH/s[0m
+[2018-04-22 12:48:17] GPU #3: PNY GTX 1070, 15.22 MH/s[0m
+[2018-04-22 12:48:17] GPU #0: GeForce GTX 1070 Ti, 17.04 MH/s[0m
+[2018-04-22 12:48:22] GPU #0: GeForce GTX 1070 Ti, 18.26 MH/s[0m
+[2018-04-22 12:48:23] GPU #3: PNY GTX 1070, 15.22 MH/s[0m
+[2018-04-22 12:48:23] GPU #1: MSI GTX 1070 Ti, 18.23 MH/s[0m
+[2018-04-22 12:48:23] GPU #4: GeForce GTX 1070 Ti, 18.13 MH/s[0m
+[2018-04-22 12:48:23] GPU #4: 1828 MHz 179.41 kH/W 101W 55C FAN 60%[0m
+[2018-04-22 12:48:23] GPU #2: ASUS GTX 1070, 15.27 MH/s[0m
+[2018-04-22 12:48:23][01;37m GPU #0: fresh hashrate = 18.26 MH/s[0m
+[2018-04-22 12:48:23][01;37m GPU #2: fresh hashrate = 15.27 MH/s[0m
+[2018-04-22 12:48:23][01;37m GPU #3: fresh hashrate = 15.22 MH/s[0m
+[2018-04-22 12:48:23][01;37m GPU #1: fresh hashrate = 18.23 MH/s[0m
+[2018-04-22 12:48:23][01;37m GPU #4: fresh hashrate = 18.13 MH/s[0m
+[2018-04-22 12:48:25][36m Benchmark algo fugue256...[0m
+[2018-04-22 12:48:25] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:25] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:25] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:25] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:26] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:26] GPU #0: GeForce GTX 1070 Ti, 69.00 MH/s[0m
+[2018-04-22 12:48:30] GPU #4: GeForce GTX 1070 Ti, 127.46 MH/s[0m
+[2018-04-22 12:48:30] GPU #1: MSI GTX 1070 Ti, 129.79 MH/s[0m
+[2018-04-22 12:48:30] GPU #0: GeForce GTX 1070 Ti, 131.28 MH/s[0m
+[2018-04-22 12:48:30] GPU #0: 1898 MHz 2254.36 kH/W 58W 58C FAN 51%[0m
+[2018-04-22 12:48:30] GPU #3: PNY GTX 1070, 94.85 MH/s[0m
+[2018-04-22 12:48:30] GPU #2: ASUS GTX 1070, 97.20 MH/s[0m
+[2018-04-22 12:48:30][01;37m GPU #4: fugue256 hashrate = 127.46 MH/s[0m
+[2018-04-22 12:48:30][01;37m GPU #2: fugue256 hashrate = 97.20 MH/s[0m
+[2018-04-22 12:48:30][01;37m GPU #1: fugue256 hashrate = 129.79 MH/s[0m
+[2018-04-22 12:48:30][01;37m GPU #3: fugue256 hashrate = 94.85 MH/s[0m
+[2018-04-22 12:48:30][01;37m GPU #0: fugue256 hashrate = 131.28 MH/s[0m
+[2018-04-22 12:48:31][36m Benchmark algo groestl...[0m
+[2018-04-22 12:48:31] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:32] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:32] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:32] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:32] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:35] GPU #4: GeForce GTX 1070 Ti, 28.23 MH/s[0m
+[2018-04-22 12:48:35] GPU #2: ASUS GTX 1070, 21.07 MH/s[0m
+[2018-04-22 12:48:41] GPU #2: ASUS GTX 1070, 31.16 MH/s[0m
+[2018-04-22 12:48:41] GPU #4: GeForce GTX 1070 Ti, 39.92 MH/s[0m
+[2018-04-22 12:48:42] GPU #0: GeForce GTX 1070 Ti, 40.13 MH/s[0m
+[2018-04-22 12:48:43] GPU #3: PNY GTX 1070, 31.15 MH/s[0m
+[2018-04-22 12:48:43][01;37m GPU #1: groestl hashrate = 36.26 MH/s[0m
+[2018-04-22 12:48:43][01;37m GPU #3: groestl hashrate = 31.15 MH/s[0m
+[2018-04-22 12:48:43][01;37m GPU #2: groestl hashrate = 31.16 MH/s[0m
+[2018-04-22 12:48:43][01;37m GPU #4: groestl hashrate = 39.92 MH/s[0m
+[2018-04-22 12:48:43][01;37m GPU #0: groestl hashrate = 40.13 MH/s[0m
+[2018-04-22 12:48:44][36m Benchmark algo hmq1725...[0m
+[2018-04-22 12:48:44] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:44] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:44] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:44] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:45] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:46] GPU #0: GeForce GTX 1070 Ti, 4706.44 kH/s[0m
+[2018-04-22 12:48:47] GPU #1: MSI GTX 1070 Ti, 4726.78 kH/s[0m
+[2018-04-22 12:48:47] GPU #4: GeForce GTX 1070 Ti, 4738.81 kH/s[0m
+[2018-04-22 12:48:47] GPU #3: PNY GTX 1070, 3682.80 kH/s[0m
+[2018-04-22 12:48:47] GPU #2: ASUS GTX 1070, 4052.06 kH/s[0m
+[2018-04-22 12:48:52] GPU #1: MSI GTX 1070 Ti, 4879.91 kH/s[0m
+[2018-04-22 12:48:52] GPU #4: GeForce GTX 1070 Ti, 4883.91 kH/s[0m
+[2018-04-22 12:48:52] GPU #1: 1615 MHz 55.07 kH/W 88W 51C FAN 0%[0m
+[2018-04-22 12:48:53] GPU #3: PNY GTX 1070, 3915.97 kH/s[0m
+[2018-04-22 12:48:53] GPU #0: GeForce GTX 1070 Ti, 4866.81 kH/s[0m
+[2018-04-22 12:48:53] GPU #2: ASUS GTX 1070, 3998.65 kH/s[0m
+[2018-04-22 12:48:53][01;37m GPU #4: hmq1725 hashrate = 4883.91 kH/s[0m
+[2018-04-22 12:48:53][01;37m GPU #2: hmq1725 hashrate = 3998.65 kH/s[0m
+[2018-04-22 12:48:53][01;37m GPU #1: hmq1725 hashrate = 4879.91 kH/s[0m
+[2018-04-22 12:48:53][01;37m GPU #3: hmq1725 hashrate = 3915.97 kH/s[0m
+[2018-04-22 12:48:53][01;37m GPU #0: hmq1725 hashrate = 4866.81 kH/s[0m
+[2018-04-22 12:48:55][36m Benchmark algo hsr...[0m
+[2018-04-22 12:48:55] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:55] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:55] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:55] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:55] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:48:58] GPU #0: GeForce GTX 1070 Ti, 9823.24 kH/s[0m
+[2018-04-22 12:48:58] GPU #4: GeForce GTX 1070 Ti, 9916.48 kH/s[0m
+[2018-04-22 12:48:58] GPU #1: MSI GTX 1070 Ti, 9954.83 kH/s[0m
+[2018-04-22 12:48:58] GPU #3: PNY GTX 1070, 7949.89 kH/s[0m
+[2018-04-22 12:48:59] GPU #2: ASUS GTX 1070, 8043.94 kH/s[0m
+[2018-04-22 12:49:03] GPU #2: ASUS GTX 1070, 8510.99 kH/s[0m
+[2018-04-22 12:49:03] GPU #0: GeForce GTX 1070 Ti, 10.39 MH/s[0m
+[2018-04-22 12:49:03] GPU #2: 1610 MHz 99.23 kH/W 85W 61C FAN 30%[0m
+[2018-04-22 12:49:03] GPU #4: GeForce GTX 1070 Ti, 10.52 MH/s[0m
+[2018-04-22 12:49:03] GPU #1: MSI GTX 1070 Ti, 10.41 MH/s[0m
+[2018-04-22 12:49:03] GPU #3: PNY GTX 1070, 8651.45 kH/s[0m
+[2018-04-22 12:49:03][01;37m GPU #1: hsr hashrate = 10.41 MH/s[0m
+[2018-04-22 12:49:03][01;37m GPU #2: hsr hashrate = 8510.99 kH/s[0m
+[2018-04-22 12:49:03][01;37m GPU #4: hsr hashrate = 10.52 MH/s[0m
+[2018-04-22 12:49:03][01;37m GPU #0: hsr hashrate = 10.39 MH/s[0m
+[2018-04-22 12:49:03][01;37m GPU #3: hsr hashrate = 8651.45 kH/s[0m
+[2018-04-22 12:49:04][36m Benchmark algo keccak...[0m
+[2018-04-22 12:49:06] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:06] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:06] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:06] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:06] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:07] GPU #4: GeForce GTX 1070 Ti, 645.15 MH/s[0m
+[2018-04-22 12:49:09] GPU #3: PNY GTX 1070, 502.35 MH/s[0m
+[2018-04-22 12:49:09] GPU #3: 1747 MHz 5769.15 kH/W 87W 58C FAN 38%[0m
+[2018-04-22 12:49:11] GPU #2: ASUS GTX 1070, 525.29 MH/s[0m
+[2018-04-22 12:49:11] GPU #1: MSI GTX 1070 Ti, 622.82 MH/s[0m
+[2018-04-22 12:49:12] GPU #0: GeForce GTX 1070 Ti, 656.37 MH/s[0m
+[2018-04-22 12:49:12][01;37m GPU #0: keccak hashrate = 656.37 MH/s[0m
+[2018-04-22 12:49:12][01;37m GPU #3: keccak hashrate = 502.35 MH/s[0m
+[2018-04-22 12:49:12][01;37m GPU #1: keccak hashrate = 622.82 MH/s[0m
+[2018-04-22 12:49:12][01;37m GPU #4: keccak hashrate = 645.15 MH/s[0m
+[2018-04-22 12:49:12][01;37m GPU #2: keccak hashrate = 525.29 MH/s[0m
+[2018-04-22 12:49:14] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:14][36m Benchmark algo jackpot...[0m
+[2018-04-22 12:49:14] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:14] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:14] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:14] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:16] GPU #1: MSI GTX 1070 Ti, 6448.03 kH/s[0m
+[2018-04-22 12:49:16] GPU #4: GeForce GTX 1070 Ti, 6138.17 kH/s[0m
+[2018-04-22 12:49:16] GPU #2: ASUS GTX 1070, 5387.71 kH/s[0m
+[2018-04-22 12:49:16] GPU #3: PNY GTX 1070, 5539.75 kH/s[0m
+[2018-04-22 12:49:16] GPU #0: GeForce GTX 1070 Ti, 6288.94 kH/s[0m
+[2018-04-22 12:49:19][01;37m GPU #1: jackpot hashrate = 7001.39 kH/s[0m
+[2018-04-22 12:49:19][01;37m GPU #3: jackpot hashrate = 5750.88 kH/s[0m
+[2018-04-22 12:49:19][01;37m GPU #0: jackpot hashrate = 7128.58 kH/s[0m
+[2018-04-22 12:49:19][01;37m GPU #4: jackpot hashrate = 6878.17 kH/s[0m
+[2018-04-22 12:49:19][01;37m GPU #2: jackpot hashrate = 5642.58 kH/s[0m
+[2018-04-22 12:49:20][36m Benchmark algo jha...[0m
+[2018-04-22 12:49:20] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:20] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:21] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:21] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:21] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:22] GPU #1: MSI GTX 1070 Ti, 12.93 MH/s[0m
+[2018-04-22 12:49:22] GPU #0: GeForce GTX 1070 Ti, 14.09 MH/s[0m
+[2018-04-22 12:49:23] GPU #4: GeForce GTX 1070 Ti, 14.82 MH/s[0m
+[2018-04-22 12:49:24] GPU #3: PNY GTX 1070, 11.60 MH/s[0m
+[2018-04-22 12:49:24] GPU #2: ASUS GTX 1070, 11.70 MH/s[0m
+[2018-04-22 12:49:31] GPU #1: MSI GTX 1070 Ti, 14.39 MH/s[0m
+[2018-04-22 12:49:31] GPU #0: GeForce GTX 1070 Ti, 15.16 MH/s[0m
+[2018-04-22 12:49:31] GPU #0: 1589 MHz 174.22 kH/W 87W 59C FAN 53%[0m
+[2018-04-22 12:49:32] GPU #3: PNY GTX 1070, 11.83 MH/s[0m
+[2018-04-22 12:49:32] GPU #4: GeForce GTX 1070 Ti, 15.16 MH/s[0m
+[2018-04-22 12:49:32] GPU #2: ASUS GTX 1070, 11.93 MH/s[0m
+[2018-04-22 12:49:32][01;37m GPU #0: jha hashrate = 15.16 MH/s[0m
+[2018-04-22 12:49:32][01;37m GPU #4: jha hashrate = 15.16 MH/s[0m
+[2018-04-22 12:49:32][01;37m GPU #3: jha hashrate = 11.83 MH/s[0m
+[2018-04-22 12:49:32][01;37m GPU #1: jha hashrate = 14.39 MH/s[0m
+[2018-04-22 12:49:32][01;37m GPU #2: jha hashrate = 11.93 MH/s[0m
+[2018-04-22 12:49:33][36m Benchmark algo lbry...[0m
+[2018-04-22 12:49:34] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:35] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:35] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:35] GPU #0: GeForce GTX 1070 Ti, 293.94 MH/s[0m
+[2018-04-22 12:49:35] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:35] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:36] GPU #3: PNY GTX 1070, 215.73 MH/s[0m
+[2018-04-22 12:49:37] GPU #1: MSI GTX 1070 Ti, 263.30 MH/s[0m
+[2018-04-22 12:49:37] GPU #2: ASUS GTX 1070, 222.75 MH/s[0m
+[2018-04-22 12:49:37] GPU #4: GeForce GTX 1070 Ti, 309.45 MH/s[0m
+[2018-04-22 12:49:39][01;37m GPU #0: lbry hashrate = 279.85 MH/s[0m
+[2018-04-22 12:49:39][01;37m GPU #2: lbry hashrate = 225.20 MH/s[0m
+[2018-04-22 12:49:39][01;37m GPU #1: lbry hashrate = 269.61 MH/s[0m
+[2018-04-22 12:49:39][01;37m GPU #4: lbry hashrate = 286.46 MH/s[0m
+[2018-04-22 12:49:39][01;37m GPU #3: lbry hashrate = 215.73 MH/s[0m
+[2018-04-22 12:49:40][36m Benchmark algo luffa...[0m
+[2018-04-22 12:49:40] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:40] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:40] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:41] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:41] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:49:41] GPU #0: GeForce GTX 1070 Ti, 307.57 MH/s[0m
+[2018-04-22 12:49:44] GPU #1: MSI GTX 1070 Ti, 435.92 MH/s[0m
+[2018-04-22 12:49:50] GPU #4: GeForce GTX 1070 Ti, 296.30 MH/s[0m
+[2018-04-22 12:49:52] GPU #3: PNY GTX 1070, 291.99 MH/s[0m
+[2018-04-22 12:49:52] GPU #2: ASUS GTX 1070, 287.34 MH/s[0m
+[2018-04-22 12:49:53] GPU #1: MSI GTX 1070 Ti, 373.68 MH/s[0m
+[2018-04-22 12:49:58] GPU #3: PNY GTX 1070, 291.75 MH/s[0m
+[2018-04-22 12:50:01] GPU #2: ASUS GTX 1070, 286.78 MH/s[0m
+[2018-04-22 12:50:05][01;37m GPU #0: luffa hashrate = 7772.52 MH/s[0m
+[2018-04-22 12:50:05][01;37m GPU #2: luffa hashrate = 286.78 MH/s[0m
+[2018-04-22 12:50:05][01;37m GPU #1: luffa hashrate = 373.68 MH/s[0m
+[2018-04-22 12:50:05][01;37m GPU #3: luffa hashrate = 291.75 MH/s[0m
+[2018-04-22 12:50:05][01;37m GPU #4: luffa hashrate = 383.20 MH/s[0m
+[2018-04-22 12:50:06] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:06] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:06] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:06][36m Benchmark algo lyra2...[0m
+[2018-04-22 12:50:06] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:06] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:07] GPU #4: GeForce GTX 1070 Ti, 9028.38 kH/s[0m
+[2018-04-22 12:50:08] GPU #2: ASUS GTX 1070, 6932.75 kH/s[0m
+[2018-04-22 12:50:08] GPU #0: GeForce GTX 1070 Ti, 8521.09 kH/s[0m
+[2018-04-22 12:50:08] GPU #3: PNY GTX 1070, 6498.10 kH/s[0m
+[2018-04-22 12:50:09] GPU #1: MSI GTX 1070 Ti, 8769.77 kH/s[0m
+[2018-04-22 12:50:11][01;37m GPU #1: lyra2 hashrate = 8778.15 kH/s[0m
+[2018-04-22 12:50:11][01;37m GPU #3: lyra2 hashrate = 6831.23 kH/s[0m
+[2018-04-22 12:50:11][01;37m GPU #4: lyra2 hashrate = 9055.69 kH/s[0m
+[2018-04-22 12:50:11][01;37m GPU #2: lyra2 hashrate = 6956.85 kH/s[0m
+[2018-04-22 12:50:11][01;37m GPU #0: lyra2 hashrate = 8915.19 kH/s[0m
+[2018-04-22 12:50:11] GPU #3: 1964 MHz 0.00 H/W 82W 60C FAN 39%[0m
+[2018-04-22 12:50:12][36m Benchmark algo lyra2v2...[0m
+[2018-04-22 12:50:12] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:13] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:13] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:13] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:13] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:14] GPU #0: GeForce GTX 1070 Ti, 42.39 MH/s[0m
+[2018-04-22 12:50:14] GPU #1: MSI GTX 1070 Ti, 39.58 MH/s[0m
+[2018-04-22 12:50:14] GPU #3: PNY GTX 1070, 32.14 MH/s[0m
+[2018-04-22 12:50:14] GPU #2: ASUS GTX 1070, 32.21 MH/s[0m
+[2018-04-22 12:50:14] GPU #4: GeForce GTX 1070 Ti, 41.88 MH/s[0m
+[2018-04-22 12:50:17] GPU #4: 1722 MHz 416.34 kH/W 100W 57C FAN 60%[0m
+[2018-04-22 12:50:21] GPU #3: PNY GTX 1070, 32.95 MH/s[0m
+[2018-04-22 12:50:21][01;37m GPU #1: lyra2v2 hashrate = 41.12 MH/s[0m
+[2018-04-22 12:50:21][01;37m GPU #3: lyra2v2 hashrate = 32.95 MH/s[0m
+[2018-04-22 12:50:21][01;37m GPU #2: lyra2v2 hashrate = 32.85 MH/s[0m
+[2018-04-22 12:50:21][01;37m GPU #0: lyra2v2 hashrate = 41.81 MH/s[0m
+[2018-04-22 12:50:21][01;37m GPU #4: lyra2v2 hashrate = 41.69 MH/s[0m
+[2018-04-22 12:50:22][36m Benchmark algo lyra2z...[0m
+[2018-04-22 12:50:22] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:23] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:23] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:23] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:23] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:25] GPU #2: ASUS GTX 1070, 1651.53 kH/s[0m
+[2018-04-22 12:50:26] GPU #0: GeForce GTX 1070 Ti, 1562.58 kH/s[0m
+[2018-04-22 12:50:26] GPU #1: MSI GTX 1070 Ti, 1551.52 kH/s[0m
+[2018-04-22 12:50:27] GPU #3: PNY GTX 1070, 1172.63 kH/s[0m
+[2018-04-22 12:50:28] GPU #4: GeForce GTX 1070 Ti, 1106.96 kH/s[0m
+[2018-04-22 12:50:30] GPU #1: MSI GTX 1070 Ti, 2008.13 kH/s[0m
+[2018-04-22 12:50:31] GPU #2: ASUS GTX 1070, 1626.48 kH/s[0m
+[2018-04-22 12:50:31][01;37m GPU #0: lyra2z hashrate = 2174.02 kH/s[0m
+[2018-04-22 12:50:31][01;37m GPU #4: lyra2z hashrate = 2186.60 kH/s[0m
+[2018-04-22 12:50:31][01;37m GPU #2: lyra2z hashrate = 1626.48 kH/s[0m
+[2018-04-22 12:50:31][01;37m GPU #1: lyra2z hashrate = 2008.13 kH/s[0m
+[2018-04-22 12:50:31][01;37m GPU #3: lyra2z hashrate = 1525.91 kH/s[0m
+[2018-04-22 12:50:33][36m Benchmark algo myr-gr...[0m
+[2018-04-22 12:50:33] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:33] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:33] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:33] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:34] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:34] GPU #1: MSI GTX 1070 Ti, 62.22 MH/s[0m
+[2018-04-22 12:50:34] GPU #0: GeForce GTX 1070 Ti, 59.62 MH/s[0m
+[2018-04-22 12:50:34] GPU #4: GeForce GTX 1070 Ti, 58.18 MH/s[0m
+[2018-04-22 12:50:34] GPU #3: PNY GTX 1070, 45.99 MH/s[0m
+[2018-04-22 12:50:40] GPU #4: GeForce GTX 1070 Ti, 70.71 MH/s[0m
+[2018-04-22 12:50:40] GPU #0: GeForce GTX 1070 Ti, 71.17 MH/s[0m
+[2018-04-22 12:50:41] GPU #3: PNY GTX 1070, 52.18 MH/s[0m
+[2018-04-22 12:50:41] GPU #2: ASUS GTX 1070, 53.62 MH/s[0m
+[2018-04-22 12:50:41] GPU #1: MSI GTX 1070 Ti, 66.49 MH/s[0m
+[2018-04-22 12:50:41][01;37m GPU #3: myr-gr hashrate = 52.18 MH/s[0m
+[2018-04-22 12:50:41][01;37m GPU #1: myr-gr hashrate = 66.49 MH/s[0m
+[2018-04-22 12:50:41][01;37m GPU #0: myr-gr hashrate = 71.17 MH/s[0m
+[2018-04-22 12:50:41][01;37m GPU #4: myr-gr hashrate = 70.71 MH/s[0m
+[2018-04-22 12:50:41][01;37m GPU #2: myr-gr hashrate = 53.62 MH/s[0m
+[2018-04-22 12:50:41] GPU #1: 1489 MHz 0.00 H/W 109W 52C FAN 50%[0m
+[2018-04-22 12:50:42][36m Benchmark algo neoscrypt...[0m
+[2018-04-22 12:50:42] GPU #0: Intensity set to 15 (+5), 32768 cuda threads[0m
+[2018-04-22 12:50:42] GPU #3: Intensity set to 15 (+5), 32768 cuda threads[0m
+[2018-04-22 12:50:42] GPU #1: Intensity set to 15 (+5), 32768 cuda threads[0m
+[2018-04-22 12:50:42] GPU #4: Intensity set to 15 (+5), 32768 cuda threads[0m
+[2018-04-22 12:50:43] GPU #2: Intensity set to 15 (+5), 32768 cuda threads[0m
+[2018-04-22 12:50:46] GPU #0: GeForce GTX 1070 Ti, 952.64 kH/s[0m
+[2018-04-22 12:50:47] GPU #4: GeForce GTX 1070 Ti, 925.82 kH/s[0m
+[2018-04-22 12:50:47] GPU #1: MSI GTX 1070 Ti, 875.07 kH/s[0m
+[2018-04-22 12:50:47] GPU #3: PNY GTX 1070, 799.44 kH/s[0m
+[2018-04-22 12:50:47] GPU #2: ASUS GTX 1070, 790.27 kH/s[0m
+[2018-04-22 12:50:51] GPU #4: GeForce GTX 1070 Ti, 913.11 kH/s[0m
+[2018-04-22 12:50:51] GPU #1: MSI GTX 1070 Ti, 869.65 kH/s[0m
+[2018-04-22 12:50:51] GPU #0: GeForce GTX 1070 Ti, 945.90 kH/s[0m
+[2018-04-22 12:50:51] GPU #2: ASUS GTX 1070, 791.06 kH/s[0m
+[2018-04-22 12:50:52] GPU #3: PNY GTX 1070, 773.42 kH/s[0m
+[2018-04-22 12:50:52][01;37m GPU #1: neoscrypt hashrate = 869.65 kH/s[0m
+[2018-04-22 12:50:52][01;37m GPU #3: neoscrypt hashrate = 773.42 kH/s[0m
+[2018-04-22 12:50:52][01;37m GPU #4: neoscrypt hashrate = 913.11 kH/s[0m
+[2018-04-22 12:50:52][01;37m GPU #0: neoscrypt hashrate = 945.90 kH/s[0m
+[2018-04-22 12:50:52][01;37m GPU #2: neoscrypt hashrate = 791.06 kH/s[0m
+[2018-04-22 12:50:52] GPU #2: 1404 MHz 0.00 H/W 96W 62C FAN 35%[0m
+[2018-04-22 12:50:53][36m Benchmark algo nist5...[0m
+[2018-04-22 12:50:53] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:53] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:53] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:53] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:50:54] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:01] GPU #4: GeForce GTX 1070 Ti, 48.07 MH/s[0m
+[2018-04-22 12:51:01] GPU #3: PNY GTX 1070, 37.17 MH/s[0m
+[2018-04-22 12:51:01] GPU #1: MSI GTX 1070 Ti, 45.48 MH/s[0m
+[2018-04-22 12:51:01] GPU #0: GeForce GTX 1070 Ti, 48.61 MH/s[0m
+[2018-04-22 12:51:01] GPU #2: ASUS GTX 1070, 36.93 MH/s[0m
+[2018-04-22 12:51:01][01;37m GPU #4: nist5 hashrate = 48.07 MH/s[0m
+[2018-04-22 12:51:01][01;37m GPU #0: nist5 hashrate = 48.61 MH/s[0m
+[2018-04-22 12:51:01][01;37m GPU #2: nist5 hashrate = 36.93 MH/s[0m
+[2018-04-22 12:51:01][01;37m GPU #3: nist5 hashrate = 37.17 MH/s[0m
+[2018-04-22 12:51:01][01;37m GPU #1: nist5 hashrate = 45.48 MH/s[0m
+[2018-04-22 12:51:03][36m Benchmark algo penta...[0m
+[2018-04-22 12:51:03] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:03] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:03] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:03] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:03] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:05] GPU #4: GeForce GTX 1070 Ti, 7069.59 kH/s[0m
+[2018-04-22 12:51:05] GPU #1: MSI GTX 1070 Ti, 6384.85 kH/s[0m
+[2018-04-22 12:51:05] GPU #0: GeForce GTX 1070 Ti, 6537.55 kH/s[0m
+[2018-04-22 12:51:05] GPU #2: ASUS GTX 1070, 6057.23 kH/s[0m
+[2018-04-22 12:51:06] GPU #3: PNY GTX 1070, 5245.38 kH/s[0m
+[2018-04-22 12:51:10] GPU #4: GeForce GTX 1070 Ti, 7485.93 kH/s[0m
+[2018-04-22 12:51:11] GPU #1: MSI GTX 1070 Ti, 6732.29 kH/s[0m
+[2018-04-22 12:51:11] GPU #3: PNY GTX 1070, 5470.45 kH/s[0m
+[2018-04-22 12:51:11] GPU #0: GeForce GTX 1070 Ti, 6896.90 kH/s[0m
+[2018-04-22 12:51:11] GPU #2: ASUS GTX 1070, 6368.26 kH/s[0m
+[2018-04-22 12:51:11][01;37m GPU #4: penta hashrate = 7485.93 kH/s[0m
+[2018-04-22 12:51:11][01;37m GPU #0: penta hashrate = 6896.90 kH/s[0m
+[2018-04-22 12:51:11][01;37m GPU #1: penta hashrate = 6732.29 kH/s[0m
+[2018-04-22 12:51:11][01;37m GPU #3: penta hashrate = 5470.45 kH/s[0m
+[2018-04-22 12:51:11][01;37m GPU #2: penta hashrate = 6368.26 kH/s[0m
+[2018-04-22 12:51:12][36m Benchmark algo phi...[0m
+[2018-04-22 12:51:12] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:12] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:12] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:13] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:13] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:14] GPU #4: GeForce GTX 1070 Ti, 20.72 MH/s[0m
+[2018-04-22 12:51:17] GPU #0: GeForce GTX 1070 Ti, 16.66 MH/s[0m
+[2018-04-22 12:51:17] GPU #3: PNY GTX 1070, 16.61 MH/s[0m
+[2018-04-22 12:51:19] GPU #1: MSI GTX 1070 Ti, 11.68 MH/s[0m
+[2018-04-22 12:51:21] GPU #4: GeForce GTX 1070 Ti, 21.03 MH/s[0m
+[2018-04-22 12:51:22] GPU #2: ASUS GTX 1070, 14.51 MH/s[0m
+[2018-04-22 12:51:30] GPU #2: ASUS GTX 1070, 16.53 MH/s[0m
+[2018-04-22 12:51:30][01;37m GPU #0: phi hashrate = 21.61 MH/s[0m
+[2018-04-22 12:51:30][01;37m GPU #2: phi hashrate = 16.53 MH/s[0m
+[2018-04-22 12:51:30][01;37m GPU #1: phi hashrate = 20.24 MH/s[0m
+[2018-04-22 12:51:30][01;37m GPU #4: phi hashrate = 21.03 MH/s[0m
+[2018-04-22 12:51:30][01;37m GPU #3: phi hashrate = 16.70 MH/s[0m
+[2018-04-22 12:51:31][36m Benchmark algo polytimos...[0m
+[2018-04-22 12:51:31] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:31] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:31] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:32] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:32] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:36] GPU #4: GeForce GTX 1070 Ti, 8689.23 kH/s[0m
+[2018-04-22 12:51:36] GPU #0: GeForce GTX 1070 Ti, 7925.63 kH/s[0m
+[2018-04-22 12:51:36] GPU #2: ASUS GTX 1070, 7227.85 kH/s[0m
+[2018-04-22 12:51:37] GPU #3: PNY GTX 1070, 6212.72 kH/s[0m
+[2018-04-22 12:51:37] GPU #1: MSI GTX 1070 Ti, 7832.07 kH/s[0m
+[2018-04-22 12:51:42] GPU #4: GeForce GTX 1070 Ti, 9462.52 kH/s[0m
+[2018-04-22 12:51:42] GPU #0: GeForce GTX 1070 Ti, 8656.36 kH/s[0m
+[2018-04-22 12:51:42] GPU #0: 1846 MHz 121.86 kH/W 71W 53C FAN 47%[0m
+[2018-04-22 12:51:42] GPU #3: PNY GTX 1070, 6475.51 kH/s[0m
+[2018-04-22 12:51:43] GPU #2: ASUS GTX 1070, 7805.77 kH/s[0m
+[2018-04-22 12:51:43] GPU #1: MSI GTX 1070 Ti, 8476.99 kH/s[0m
+[2018-04-22 12:51:43][01;37m GPU #3: polytimos hashrate = 6475.51 kH/s[0m
+[2018-04-22 12:51:43][01;37m GPU #1: polytimos hashrate = 8476.99 kH/s[0m
+[2018-04-22 12:51:43][01;37m GPU #0: polytimos hashrate = 8656.36 kH/s[0m
+[2018-04-22 12:51:43][01;37m GPU #2: polytimos hashrate = 7805.77 kH/s[0m
+[2018-04-22 12:51:43][01;37m GPU #4: polytimos hashrate = 9462.52 kH/s[0m
+[2018-04-22 12:51:44][36m Benchmark algo qubit...[0m
+[2018-04-22 12:51:44] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:44] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:44] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:45] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:45] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:46] GPU #4: GeForce GTX 1070 Ti, 22.25 MH/s[0m
+[2018-04-22 12:51:46] GPU #0: GeForce GTX 1070 Ti, 20.31 MH/s[0m
+[2018-04-22 12:51:46] GPU #3: PNY GTX 1070, 18.66 MH/s[0m
+[2018-04-22 12:51:52] GPU #0: GeForce GTX 1070 Ti, 23.43 MH/s[0m
+[2018-04-22 12:51:52] GPU #1: MSI GTX 1070 Ti, 23.04 MH/s[0m
+[2018-04-22 12:51:52] GPU #1: 1790 MHz 206.44 kH/W 111W 56C FAN 0%[0m
+[2018-04-22 12:51:52] GPU #4: GeForce GTX 1070 Ti, 23.21 MH/s[0m
+[2018-04-22 12:51:53] GPU #3: PNY GTX 1070, 18.88 MH/s[0m
+[2018-04-22 12:51:53] GPU #2: ASUS GTX 1070, 18.75 MH/s[0m
+[2018-04-22 12:51:53][01;37m GPU #0: qubit hashrate = 23.43 MH/s[0m
+[2018-04-22 12:51:53][01;37m GPU #2: qubit hashrate = 18.75 MH/s[0m
+[2018-04-22 12:51:53][01;37m GPU #1: qubit hashrate = 23.04 MH/s[0m
+[2018-04-22 12:51:53][01;37m GPU #3: qubit hashrate = 18.88 MH/s[0m
+[2018-04-22 12:51:53][01;37m GPU #4: qubit hashrate = 23.21 MH/s[0m
+[2018-04-22 12:51:54][36m Benchmark algo sha256d...[0m
+[2018-04-22 12:51:54] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:54] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:54] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:55] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:55] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:51:57] GPU #4: GeForce GTX 1070 Ti, 963.03 MH/s[0m
+[2018-04-22 12:52:00] GPU #3: PNY GTX 1070, 615.18 MH/s[0m
+[2018-04-22 12:52:00] GPU #2: ASUS GTX 1070, 728.87 MH/s[0m
+[2018-04-22 12:52:01] GPU #0: GeForce GTX 1070 Ti, 886.51 MH/s[0m
+[2018-04-22 12:52:02] GPU #1: MSI GTX 1070 Ti, 646.97 MH/s[0m
+[2018-04-22 12:52:04] GPU #2: ASUS GTX 1070, 742.69 MH/s[0m
+[2018-04-22 12:52:04] GPU #2: 1805 MHz 7750.98 kH/W 95W 64C FAN 34%[0m
+[2018-04-22 12:52:06] GPU #0: GeForce GTX 1070 Ti, 898.76 MH/s[0m
+[2018-04-22 12:52:06] GPU #1: MSI GTX 1070 Ti, 821.28 MH/s[0m
+[2018-04-22 12:52:06][01;37m GPU #3: sha256d hashrate = 633.65 MH/s[0m
+[2018-04-22 12:52:06][01;37m GPU #1: sha256d hashrate = 821.28 MH/s[0m
+[2018-04-22 12:52:06][01;37m GPU #4: sha256d hashrate = 882.22 MH/s[0m
+[2018-04-22 12:52:06][01;37m GPU #2: sha256d hashrate = 742.69 MH/s[0m
+[2018-04-22 12:52:06][01;37m GPU #0: sha256d hashrate = 898.76 MH/s[0m
+[2018-04-22 12:52:07] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:08][36m Benchmark algo sha256t...[0m
+[2018-04-22 12:52:08] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:08] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:08] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:08] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:12] GPU #4: GeForce GTX 1070 Ti, 480.82 MH/s[0m
+[2018-04-22 12:52:17] GPU #3: PNY GTX 1070, 341.65 MH/s[0m
+[2018-04-22 12:52:17] GPU #0: GeForce GTX 1070 Ti, 476.25 MH/s[0m
+[2018-04-22 12:52:17] GPU #1: MSI GTX 1070 Ti, 414.28 MH/s[0m
+[2018-04-22 12:52:18] GPU #2: ASUS GTX 1070, 382.03 MH/s[0m
+[2018-04-22 12:52:22] GPU #3: PNY GTX 1070, 348.82 MH/s[0m
+[2018-04-22 12:52:22] GPU #3: 1959 MHz 3793.93 kH/W 91W 58C FAN 39%[0m
+[2018-04-22 12:52:24] GPU #2: ASUS GTX 1070, 384.31 MH/s[0m
+[2018-04-22 12:52:25] GPU #1: MSI GTX 1070 Ti, 434.97 MH/s[0m
+[2018-04-22 12:52:26] GPU #0: GeForce GTX 1070 Ti, 481.03 MH/s[0m
+[2018-04-22 12:52:26][01;37m GPU #4: sha256t hashrate = 468.87 MH/s[0m
+[2018-04-22 12:52:26][01;37m GPU #0: sha256t hashrate = 481.03 MH/s[0m
+[2018-04-22 12:52:26][01;37m GPU #1: sha256t hashrate = 434.97 MH/s[0m
+[2018-04-22 12:52:26][01;37m GPU #2: sha256t hashrate = 384.31 MH/s[0m
+[2018-04-22 12:52:26][01;37m GPU #3: sha256t hashrate = 348.82 MH/s[0m
+[2018-04-22 12:52:27][36m Benchmark algo sia...[0m
+[2018-04-22 12:52:27] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:27] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:28] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:28] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:28] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:30] GPU #1: MSI GTX 1070 Ti, 1005.66 MH/s[0m
+[2018-04-22 12:52:30] GPU #2: ASUS GTX 1070, 1197.35 MH/s[0m
+[2018-04-22 12:52:32] GPU #0: GeForce GTX 1070 Ti, 1413.68 MH/s[0m
+[2018-04-22 12:52:33] GPU #4: GeForce GTX 1070 Ti, 1368.45 MH/s[0m
+[2018-04-22 12:52:34] GPU #3: PNY GTX 1070, 898.36 MH/s[0m
+[2018-04-22 12:52:34] GPU #2: ASUS GTX 1070, 1119.53 MH/s[0m
+[2018-04-22 12:52:34] GPU #1: MSI GTX 1070 Ti, 962.27 MH/s[0m
+[2018-04-22 12:52:36] GPU #4: 1796 MHz 14.52 MH/W 91W 56C FAN 60%[0m
+[2018-04-22 12:52:38] GPU #3: PNY GTX 1070, 1002.61 MH/s[0m
+[2018-04-22 12:52:38][01;37m GPU #1: sia hashrate = 962.27 MH/s[0m
+[2018-04-22 12:52:38][01;37m GPU #3: sia hashrate = 1002.61 MH/s[0m
+[2018-04-22 12:52:38][01;37m GPU #0: sia hashrate = 1350.83 MH/s[0m
+[2018-04-22 12:52:38][01;37m GPU #2: sia hashrate = 1119.53 MH/s[0m
+[2018-04-22 12:52:38][01;37m GPU #4: sia hashrate = 1326.66 MH/s[0m
+[2018-04-22 12:52:39] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:39][36m Benchmark algo sib...[0m
+[2018-04-22 12:52:39] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:39] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:40] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:40] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:41] GPU #4: GeForce GTX 1070 Ti, 8877.23 kH/s[0m
+[2018-04-22 12:52:41] GPU #1: MSI GTX 1070 Ti, 8473.85 kH/s[0m
+[2018-04-22 12:52:41] GPU #2: ASUS GTX 1070, 7069.14 kH/s[0m
+[2018-04-22 12:52:41] GPU #0: GeForce GTX 1070 Ti, 7227.42 kH/s[0m
+[2018-04-22 12:52:47] GPU #0: GeForce GTX 1070 Ti, 9086.75 kH/s[0m
+[2018-04-22 12:52:47] GPU #0: 1739 MHz 104.84 kH/W 86W 58C FAN 49%[0m
+[2018-04-22 12:52:47] GPU #1: MSI GTX 1070 Ti, 9197.58 kH/s[0m
+[2018-04-22 12:52:47] GPU #4: GeForce GTX 1070 Ti, 9311.82 kH/s[0m
+[2018-04-22 12:52:47] GPU #3: PNY GTX 1070, 7500.38 kH/s[0m
+[2018-04-22 12:52:48] GPU #2: ASUS GTX 1070, 7383.90 kH/s[0m
+[2018-04-22 12:52:48][01;37m GPU #0: sib hashrate = 9086.75 kH/s[0m
+[2018-04-22 12:52:48][01;37m GPU #4: sib hashrate = 9311.82 kH/s[0m
+[2018-04-22 12:52:48][01;37m GPU #2: sib hashrate = 7383.90 kH/s[0m
+[2018-04-22 12:52:48][01;37m GPU #1: sib hashrate = 9197.58 kH/s[0m
+[2018-04-22 12:52:48][01;37m GPU #3: sib hashrate = 7500.38 kH/s[0m
+[2018-04-22 12:52:49][36m Benchmark algo skein...[0m
+[2018-04-22 12:52:49] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:49] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:49] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:50] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:50] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:51] GPU #0: GeForce GTX 1070 Ti, 406.62 MH/s[0m
+[2018-04-22 12:52:51] GPU #3: PNY GTX 1070, 290.05 MH/s[0m
+[2018-04-22 12:52:52] GPU #4: GeForce GTX 1070 Ti, 407.81 MH/s[0m
+[2018-04-22 12:52:55] GPU #2: ASUS GTX 1070, 323.67 MH/s[0m
+[2018-04-22 12:52:56] GPU #1: MSI GTX 1070 Ti, 381.74 MH/s[0m
+[2018-04-22 12:52:56][01;37m GPU #1: skein hashrate = 381.74 MH/s[0m
+[2018-04-22 12:52:56][01;37m GPU #3: skein hashrate = 310.03 MH/s[0m
+[2018-04-22 12:52:56][01;37m GPU #0: skein hashrate = 421.39 MH/s[0m
+[2018-04-22 12:52:56][01;37m GPU #4: skein hashrate = 407.81 MH/s[0m
+[2018-04-22 12:52:56][01;37m GPU #2: skein hashrate = 323.67 MH/s[0m
+[2018-04-22 12:52:56] GPU #1: 1789 MHz 0.00 H/W 109W 55C FAN 51%[0m
+[2018-04-22 12:52:58] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:58] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:58] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:58][36m Benchmark algo skein2...[0m
+[2018-04-22 12:52:58] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:59] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:52:59] GPU #2: ASUS GTX 1070, 2965.13 MH/s[0m
+[2018-04-22 12:52:59] GPU #3: PNY GTX 1070, 1972.68 MH/s[0m
+[2018-04-22 12:53:00] GPU #1: MSI GTX 1070 Ti, 1493.66 MH/s[0m
+[2018-04-22 12:53:00] GPU #4: GeForce GTX 1070 Ti, 1705.38 MH/s[0m
+[2018-04-22 12:53:00] GPU #0: GeForce GTX 1070 Ti, 2124.10 MH/s[0m
+[2018-04-22 12:53:03] GPU #3: PNY GTX 1070, 431.52 MH/s[0m
+[2018-04-22 12:53:07] GPU #2: ASUS GTX 1070, 319.16 MH/s[0m
+[2018-04-22 12:53:07] GPU #2: 1525 MHz 3272.17 kH/W 97W 63C FAN 35%[0m
+[2018-04-22 12:53:07] GPU #1: MSI GTX 1070 Ti, 464.11 MH/s[0m
+[2018-04-22 12:53:10] GPU #0: GeForce GTX 1070 Ti, 436.79 MH/s[0m
+[2018-04-22 12:53:11][01;37m GPU #4: skein2 hashrate = 902.05 MH/s[0m
+[2018-04-22 12:53:11][01;37m GPU #0: skein2 hashrate = 436.79 MH/s[0m
+[2018-04-22 12:53:11][01;37m GPU #3: skein2 hashrate = 431.52 MH/s[0m
+[2018-04-22 12:53:11][01;37m GPU #1: skein2 hashrate = 464.11 MH/s[0m
+[2018-04-22 12:53:11][01;37m GPU #2: skein2 hashrate = 319.16 MH/s[0m
+[2018-04-22 12:53:12] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:12] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:12] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:13][36m Benchmark algo skunk...[0m
+[2018-04-22 12:53:13] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:13] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:15] GPU #4: GeForce GTX 1070 Ti, 14.95 MH/s[0m
+[2018-04-22 12:53:15] GPU #1: MSI GTX 1070 Ti, 12.73 MH/s[0m
+[2018-04-22 12:53:15] GPU #2: ASUS GTX 1070, 12.79 MH/s[0m
+[2018-04-22 12:53:16] GPU #3: PNY GTX 1070, 10.03 MH/s[0m
+[2018-04-22 12:53:16] GPU #0: GeForce GTX 1070 Ti, 13.36 MH/s[0m
+[2018-04-22 12:53:19] GPU #4: GeForce GTX 1070 Ti, 16.86 MH/s[0m
+[2018-04-22 12:53:19] GPU #1: MSI GTX 1070 Ti, 14.02 MH/s[0m
+[2018-04-22 12:53:20] GPU #2: ASUS GTX 1070, 14.08 MH/s[0m
+[2018-04-22 12:53:20][01;37m GPU #4: skunk hashrate = 16.86 MH/s[0m
+[2018-04-22 12:53:20][01;37m GPU #0: skunk hashrate = 14.54 MH/s[0m
+[2018-04-22 12:53:20][01;37m GPU #2: skunk hashrate = 14.08 MH/s[0m
+[2018-04-22 12:53:20][01;37m GPU #1: skunk hashrate = 14.02 MH/s[0m
+[2018-04-22 12:53:20][01;37m GPU #3: skunk hashrate = 10.49 MH/s[0m
+[2018-04-22 12:53:21][36m Benchmark algo s3...[0m
+[2018-04-22 12:53:21] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:21] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:21] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:21] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:22] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:23] GPU #0: GeForce GTX 1070 Ti, 169.50 MH/s[0m
+[2018-04-22 12:53:28] GPU #3: PNY GTX 1070, 11.53 MH/s[0m
+[2018-04-22 12:53:28] GPU #2: ASUS GTX 1070, 11.87 MH/s[0m
+[2018-04-22 12:53:33] GPU #1: MSI GTX 1070 Ti, 35.48 MH/s[0m
+[2018-04-22 12:53:37] GPU #4: GeForce GTX 1070 Ti, 58.71 MH/s[0m
+[2018-04-22 12:53:37] GPU #4: 1790 MHz 567.41 kH/W 103W 55C FAN 60%[0m
+[2018-04-22 12:53:38] GPU #1: MSI GTX 1070 Ti, 74.63 MH/s[0m
+[2018-04-22 12:53:47] GPU #0: GeForce GTX 1070 Ti, 49.49 MH/s[0m
+[2018-04-22 12:53:49][01;37m GPU #2: s3 hashrate = 444.95 MH/s[0m
+[2018-04-22 12:53:49][01;37m GPU #0: s3 hashrate = 49.49 MH/s[0m
+[2018-04-22 12:53:49][01;37m GPU #3: s3 hashrate = 437.26 MH/s[0m
+[2018-04-22 12:53:49][01;37m GPU #1: s3 hashrate = 74.63 MH/s[0m
+[2018-04-22 12:53:49][01;37m GPU #4: s3 hashrate = 58.71 MH/s[0m
+[2018-04-22 12:53:50] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:50][36m Benchmark algo timetravel...[0m
+[2018-04-22 12:53:50] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:50] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:51] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:51] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:51] Timetravel first algo is now cube[0m
+[2018-04-22 12:53:53] GPU #4: GeForce GTX 1070 Ti, 12.17 MH/s[0m
+[2018-04-22 12:53:53] GPU #0: GeForce GTX 1070 Ti, 11.88 MH/s[0m
+[2018-04-22 12:53:53] GPU #1: MSI GTX 1070 Ti, 11.76 MH/s[0m
+[2018-04-22 12:53:53] GPU #2: ASUS GTX 1070, 10.23 MH/s[0m
+[2018-04-22 12:53:53] GPU #3: PNY GTX 1070, 9872.32 kH/s[0m
+[2018-04-22 12:53:56] GPU #0: 1717 MHz 160.74 kH/W 82W 58C FAN 49%[0m
+[2018-04-22 12:53:57] GPU #2: ASUS GTX 1070, 10.32 MH/s[0m
+[2018-04-22 12:53:57] GPU #3: PNY GTX 1070, 10.46 MH/s[0m
+[2018-04-22 12:53:57][01;37m GPU #3: timetravel hashrate = 10.46 MH/s[0m
+[2018-04-22 12:53:57][01;37m GPU #0: timetravel hashrate = 13.19 MH/s[0m
+[2018-04-22 12:53:57][01;37m GPU #4: timetravel hashrate = 13.22 MH/s[0m
+[2018-04-22 12:53:57][01;37m GPU #2: timetravel hashrate = 10.32 MH/s[0m
+[2018-04-22 12:53:57][01;37m GPU #1: timetravel hashrate = 13.00 MH/s[0m
+[2018-04-22 12:53:58][36m Benchmark algo tribus...[0m
+[2018-04-22 12:53:58] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:58] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:59] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:59] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:53:59] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:00] GPU #0: GeForce GTX 1070 Ti, 17.39 MH/s[0m
+[2018-04-22 12:54:01] GPU #3: PNY GTX 1070, 12.73 MH/s[0m
+[2018-04-22 12:54:01] GPU #4: GeForce GTX 1070 Ti, 21.77 MH/s[0m
+[2018-04-22 12:54:02] GPU #2: ASUS GTX 1070, 18.49 MH/s[0m
+[2018-04-22 12:54:02] GPU #1: MSI GTX 1070 Ti, 17.99 MH/s[0m
+[2018-04-22 12:54:04][01;37m GPU #3: tribus hashrate = 12.73 MH/s[0m
+[2018-04-22 12:54:04][01;37m GPU #1: tribus hashrate = 19.29 MH/s[0m
+[2018-04-22 12:54:04][01;37m GPU #0: tribus hashrate = 17.60 MH/s[0m
+[2018-04-22 12:54:04][01;37m GPU #4: tribus hashrate = 22.92 MH/s[0m
+[2018-04-22 12:54:04][01;37m GPU #2: tribus hashrate = 19.31 MH/s[0m
+[2018-04-22 12:54:04] GPU #1: 1683 MHz 0.00 H/W 84W 51C FAN 0%[0m
+[2018-04-22 12:54:05] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:05] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:05][36m Benchmark algo bitcore...[0m
+[2018-04-22 12:54:05] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:06] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:06] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:07] GPU #3: PNY GTX 1070, 8779.46 kH/s[0m
+[2018-04-22 12:54:09] GPU #4: GeForce GTX 1070 Ti, 14.06 MH/s[0m
+[2018-04-22 12:54:09] GPU #1: MSI GTX 1070 Ti, 13.50 MH/s[0m
+[2018-04-22 12:54:09] GPU #2: ASUS GTX 1070, 10.75 MH/s[0m
+[2018-04-22 12:54:09] GPU #0: GeForce GTX 1070 Ti, 14.26 MH/s[0m
+[2018-04-22 12:54:14] GPU #3: PNY GTX 1070, 11.31 MH/s[0m
+[2018-04-22 12:54:16] GPU #1: MSI GTX 1070 Ti, 14.76 MH/s[0m
+[2018-04-22 12:54:16] GPU #4: GeForce GTX 1070 Ti, 15.02 MH/s[0m
+[2018-04-22 12:54:17] GPU #0: GeForce GTX 1070 Ti, 15.14 MH/s[0m
+[2018-04-22 12:54:17] GPU #2: ASUS GTX 1070, 11.36 MH/s[0m
+[2018-04-22 12:54:17] GPU #2: 1613 MHz 125.51 kH/W 90W 59C FAN 33%[0m
+[2018-04-22 12:54:17][01;37m GPU #4: bitcore hashrate = 15.02 MH/s[0m
+[2018-04-22 12:54:17][01;37m GPU #2: bitcore hashrate = 11.36 MH/s[0m
+[2018-04-22 12:54:17][01;37m GPU #3: bitcore hashrate = 11.31 MH/s[0m
+[2018-04-22 12:54:17][01;37m GPU #1: bitcore hashrate = 14.76 MH/s[0m
+[2018-04-22 12:54:17][01;37m GPU #0: bitcore hashrate = 15.14 MH/s[0m
+[2018-04-22 12:54:18][36m Benchmark algo x11evo...[0m
+[2018-04-22 12:54:18] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:18] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:18] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:18] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:19] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:22] GPU #4: GeForce GTX 1070 Ti, 9434.62 kH/s[0m
+[2018-04-22 12:54:22] GPU #0: GeForce GTX 1070 Ti, 9302.27 kH/s[0m
+[2018-04-22 12:54:22] GPU #1: MSI GTX 1070 Ti, 9341.33 kH/s[0m
+[2018-04-22 12:54:22] GPU #3: PNY GTX 1070, 7250.63 kH/s[0m
+[2018-04-22 12:54:23] GPU #2: ASUS GTX 1070, 7355.44 kH/s[0m
+[2018-04-22 12:54:26] GPU #4: GeForce GTX 1070 Ti, 10.09 MH/s[0m
+[2018-04-22 12:54:27] GPU #3: PNY GTX 1070, 7851.39 kH/s[0m
+[2018-04-22 12:54:27] GPU #0: GeForce GTX 1070 Ti, 9812.70 kH/s[0m
+[2018-04-22 12:54:27] GPU #1: MSI GTX 1070 Ti, 9863.43 kH/s[0m
+[2018-04-22 12:54:27] GPU #3: 1647 MHz 103.82 kH/W 75W 53C FAN 38%[0m
+[2018-04-22 12:54:27] GPU #2: ASUS GTX 1070, 7711.82 kH/s[0m
+[2018-04-22 12:54:27][01;37m GPU #4: x11evo hashrate = 10.09 MH/s[0m
+[2018-04-22 12:54:27][01;37m GPU #2: x11evo hashrate = 7711.82 kH/s[0m
+[2018-04-22 12:54:27][01;37m GPU #3: x11evo hashrate = 7851.39 kH/s[0m
+[2018-04-22 12:54:27][01;37m GPU #1: x11evo hashrate = 9863.43 kH/s[0m
+[2018-04-22 12:54:27][01;37m GPU #0: x11evo hashrate = 9812.70 kH/s[0m
+[2018-04-22 12:54:28][36m Benchmark algo x11...[0m
+[2018-04-22 12:54:28] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:28] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:28] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:29] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:29] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:31] GPU #1: MSI GTX 1070 Ti, 10.77 MH/s[0m
+[2018-04-22 12:54:31] GPU #0: GeForce GTX 1070 Ti, 11.02 MH/s[0m
+[2018-04-22 12:54:32] GPU #4: GeForce GTX 1070 Ti, 10.81 MH/s[0m
+[2018-04-22 12:54:32] GPU #3: PNY GTX 1070, 8649.25 kH/s[0m
+[2018-04-22 12:54:32] GPU #2: ASUS GTX 1070, 8755.99 kH/s[0m
+[2018-04-22 12:54:36] GPU #4: GeForce GTX 1070 Ti, 11.72 MH/s[0m
+[2018-04-22 12:54:37] GPU #3: PNY GTX 1070, 9099.95 kH/s[0m
+[2018-04-22 12:54:37] GPU #1: MSI GTX 1070 Ti, 11.66 MH/s[0m
+[2018-04-22 12:54:37] GPU #0: GeForce GTX 1070 Ti, 11.57 MH/s[0m
+[2018-04-22 12:54:37] GPU #2: ASUS GTX 1070, 9215.08 kH/s[0m
+[2018-04-22 12:54:37][01;37m GPU #4: x11 hashrate = 11.72 MH/s[0m
+[2018-04-22 12:54:37][01;37m GPU #2: x11 hashrate = 9215.08 kH/s[0m
+[2018-04-22 12:54:37][01;37m GPU #3: x11 hashrate = 9099.95 kH/s[0m
+[2018-04-22 12:54:37][01;37m GPU #1: x11 hashrate = 11.66 MH/s[0m
+[2018-04-22 12:54:37][01;37m GPU #0: x11 hashrate = 11.57 MH/s[0m
+[2018-04-22 12:54:38][36m Benchmark algo x13...[0m
+[2018-04-22 12:54:39] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:39] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:39] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:39] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:39] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:42] GPU #0: GeForce GTX 1070 Ti, 10.49 MH/s[0m
+[2018-04-22 12:54:42] GPU #1: MSI GTX 1070 Ti, 10.03 MH/s[0m
+[2018-04-22 12:54:42] GPU #4: GeForce GTX 1070 Ti, 10.22 MH/s[0m
+[2018-04-22 12:54:42] GPU #3: PNY GTX 1070, 7942.08 kH/s[0m
+[2018-04-22 12:54:43] GPU #2: ASUS GTX 1070, 7969.97 kH/s[0m
+[2018-04-22 12:54:47] GPU #1: MSI GTX 1070 Ti, 10.65 MH/s[0m
+[2018-04-22 12:54:47] GPU #2: ASUS GTX 1070, 8350.34 kH/s[0m
+[2018-04-22 12:54:47] GPU #0: GeForce GTX 1070 Ti, 10.81 MH/s[0m
+[2018-04-22 12:54:47] GPU #4: GeForce GTX 1070 Ti, 10.76 MH/s[0m
+[2018-04-22 12:54:47] GPU #3: PNY GTX 1070, 8455.29 kH/s[0m
+[2018-04-22 12:54:47][01;37m GPU #1: x13 hashrate = 10.65 MH/s[0m
+[2018-04-22 12:54:47][01;37m GPU #3: x13 hashrate = 8455.29 kH/s[0m
+[2018-04-22 12:54:47][01;37m GPU #0: x13 hashrate = 10.81 MH/s[0m
+[2018-04-22 12:54:47][01;37m GPU #2: x13 hashrate = 8350.34 kH/s[0m
+[2018-04-22 12:54:47][01;37m GPU #4: x13 hashrate = 10.76 MH/s[0m
+[2018-04-22 12:54:48][36m Benchmark algo x14...[0m
+[2018-04-22 12:54:48] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:48] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:49] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:49] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:49] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:51] GPU #0: GeForce GTX 1070 Ti, 9316.82 kH/s[0m
+[2018-04-22 12:54:52] GPU #2: ASUS GTX 1070, 7450.03 kH/s[0m
+[2018-04-22 12:54:52] GPU #1: MSI GTX 1070 Ti, 8979.20 kH/s[0m
+[2018-04-22 12:54:52] GPU #3: PNY GTX 1070, 7123.84 kH/s[0m
+[2018-04-22 12:54:52] GPU #4: GeForce GTX 1070 Ti, 9194.58 kH/s[0m
+[2018-04-22 12:54:56] GPU #1: MSI GTX 1070 Ti, 9673.55 kH/s[0m
+[2018-04-22 12:54:56] GPU #3: PNY GTX 1070, 7599.54 kH/s[0m
+[2018-04-22 12:54:56] GPU #4: GeForce GTX 1070 Ti, 9752.19 kH/s[0m
+[2018-04-22 12:54:57] GPU #2: ASUS GTX 1070, 7542.09 kH/s[0m
+[2018-04-22 12:54:57] GPU #0: GeForce GTX 1070 Ti, 9871.54 kH/s[0m
+[2018-04-22 12:54:57][01;37m GPU #4: x14 hashrate = 9752.19 kH/s[0m
+[2018-04-22 12:54:57][01;37m GPU #0: x14 hashrate = 9871.54 kH/s[0m
+[2018-04-22 12:54:57][01;37m GPU #1: x14 hashrate = 9673.55 kH/s[0m
+[2018-04-22 12:54:57][01;37m GPU #3: x14 hashrate = 7599.54 kH/s[0m
+[2018-04-22 12:54:57][01;37m GPU #2: x14 hashrate = 7542.09 kH/s[0m
+[2018-04-22 12:54:58] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:58] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:58][36m Benchmark algo x15...[0m
+[2018-04-22 12:54:58] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:59] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:54:59] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:01] GPU #4: GeForce GTX 1070 Ti, 9970.17 kH/s[0m
+[2018-04-22 12:55:01] GPU #1: MSI GTX 1070 Ti, 9624.77 kH/s[0m
+[2018-04-22 12:55:01] GPU #2: ASUS GTX 1070, 7651.58 kH/s[0m
+[2018-04-22 12:55:01] GPU #0: GeForce GTX 1070 Ti, 10.21 MH/s[0m
+[2018-04-22 12:55:01] GPU #3: PNY GTX 1070, 7650.50 kH/s[0m
+[2018-04-22 12:55:07] GPU #4: GeForce GTX 1070 Ti, 10.15 MH/s[0m
+[2018-04-22 12:55:07] GPU #1: MSI GTX 1070 Ti, 10.08 MH/s[0m
+[2018-04-22 12:55:07] GPU #2: ASUS GTX 1070, 7995.99 kH/s[0m
+[2018-04-22 12:55:07] GPU #3: PNY GTX 1070, 7943.43 kH/s[0m
+[2018-04-22 12:55:07] GPU #0: GeForce GTX 1070 Ti, 10.35 MH/s[0m
+[2018-04-22 12:55:07][01;37m GPU #4: x15 hashrate = 10.15 MH/s[0m
+[2018-04-22 12:55:07][01;37m GPU #0: x15 hashrate = 10.35 MH/s[0m
+[2018-04-22 12:55:07][01;37m GPU #1: x15 hashrate = 10.08 MH/s[0m
+[2018-04-22 12:55:07][01;37m GPU #3: x15 hashrate = 7943.43 kH/s[0m
+[2018-04-22 12:55:07][01;37m GPU #2: x15 hashrate = 7995.99 kH/s[0m
+[2018-04-22 12:55:09] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:09] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:09] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:09][36m Benchmark algo x17...[0m
+[2018-04-22 12:55:09] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:10] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:11] GPU #4: GeForce GTX 1070 Ti, 9466.35 kH/s[0m
+[2018-04-22 12:55:11] GPU #2: ASUS GTX 1070, 7019.62 kH/s[0m
+[2018-04-22 12:55:11] GPU #3: PNY GTX 1070, 6775.53 kH/s[0m
+[2018-04-22 12:55:11] GPU #0: GeForce GTX 1070 Ti, 10.22 MH/s[0m
+[2018-04-22 12:55:16] GPU #3: PNY GTX 1070, 8012.05 kH/s[0m
+[2018-04-22 12:55:16] GPU #2: ASUS GTX 1070, 7884.49 kH/s[0m
+[2018-04-22 12:55:16] GPU #4: GeForce GTX 1070 Ti, 10.19 MH/s[0m
+[2018-04-22 12:55:17] GPU #0: GeForce GTX 1070 Ti, 10.36 MH/s[0m
+[2018-04-22 12:55:17] GPU #1: MSI GTX 1070 Ti, 10.02 MH/s[0m
+[2018-04-22 12:55:17][01;37m GPU #3: x17 hashrate = 8012.05 kH/s[0m
+[2018-04-22 12:55:17][01;37m GPU #1: x17 hashrate = 10.02 MH/s[0m
+[2018-04-22 12:55:17][01;37m GPU #4: x17 hashrate = 10.19 MH/s[0m
+[2018-04-22 12:55:17][01;37m GPU #2: x17 hashrate = 7884.49 kH/s[0m
+[2018-04-22 12:55:17][01;37m GPU #0: x17 hashrate = 10.36 MH/s[0m
+[2018-04-22 12:55:19][36m Benchmark algo vanilla...[0m
+[2018-04-22 12:55:20] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:20] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:20] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:20] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:20] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:21] GPU #4: GeForce GTX 1070 Ti, 1007.62 MH/s[0m
+[2018-04-22 12:55:23] GPU #3: PNY GTX 1070, 1021.95 MH/s[0m
+[2018-04-22 12:55:24] GPU #2: ASUS GTX 1070, 1021.16 MH/s[0m
+[2018-04-22 12:55:25] GPU #1: MSI GTX 1070 Ti, 1018.18 MH/s[0m
+[2018-04-22 12:55:26] GPU #0: GeForce GTX 1070 Ti, 1022.36 MH/s[0m
+[2018-04-22 12:55:30] GPU #0: GeForce GTX 1070 Ti, 1038.71 MH/s[0m
+[2018-04-22 12:55:30][01;37m GPU #4: vanilla hashrate = 1023.09 MH/s[0m
+[2018-04-22 12:55:30][01;37m GPU #0: vanilla hashrate = 1038.71 MH/s[0m
+[2018-04-22 12:55:30][01;37m GPU #1: vanilla hashrate = 1041.02 MH/s[0m
+[2018-04-22 12:55:30][01;37m GPU #2: vanilla hashrate = 1029.91 MH/s[0m
+[2018-04-22 12:55:30][01;37m GPU #3: vanilla hashrate = 1022.03 MH/s[0m
+[2018-04-22 12:55:32][36m Benchmark algo veltor...[0m
+[2018-04-22 12:55:32] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:32] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:32] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:32] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:33] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:33] GPU #4: GeForce GTX 1070 Ti, 15.08 MH/s[0m
+[2018-04-22 12:55:33] GPU #3: PNY GTX 1070, 10.46 MH/s[0m
+[2018-04-22 12:55:33] GPU #2: ASUS GTX 1070, 13.12 MH/s[0m
+[2018-04-22 12:55:33] GPU #1: MSI GTX 1070 Ti, 15.84 MH/s[0m
+[2018-04-22 12:55:34] GPU #0: GeForce GTX 1070 Ti, 19.32 MH/s[0m
+[2018-04-22 12:55:35] GPU #4: 2025 MHz 244.54 kH/W 81W 55C FAN 60%[0m
+[2018-04-22 12:55:38] GPU #3: PNY GTX 1070, 15.58 MH/s[0m
+[2018-04-22 12:55:39] GPU #1: MSI GTX 1070 Ti, 20.45 MH/s[0m
+[2018-04-22 12:55:39][01;37m GPU #3: veltor hashrate = 15.58 MH/s[0m
+[2018-04-22 12:55:39][01;37m GPU #1: veltor hashrate = 20.45 MH/s[0m
+[2018-04-22 12:55:39][01;37m GPU #0: veltor hashrate = 19.32 MH/s[0m
+[2018-04-22 12:55:39][01;37m GPU #4: veltor hashrate = 19.84 MH/s[0m
+[2018-04-22 12:55:39][01;37m GPU #2: veltor hashrate = 15.35 MH/s[0m
+[2018-04-22 12:55:40][36m Benchmark algo whirlpool...[0m
+[2018-04-22 12:55:40] GPU #0: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:40] GPU #4: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:40] GPU #2: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:41] GPU #3: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:41] GPU #1: Intensity set to 20, 1048576 cuda threads[0m
+[2018-04-22 12:55:42] GPU #0: GeForce GTX 1070 Ti, 50.34 MH/s[0m
+[2018-04-22 12:55:42] GPU #4: GeForce GTX 1070 Ti, 49.41 MH/s[0m
+[2018-04-22 12:55:42] GPU #2: ASUS GTX 1070, 38.80 MH/s[0m
+[2018-04-22 12:55:43] GPU #3: PNY GTX 1070, 39.19 MH/s[0m
+[2018-04-22 12:55:50] GPU #4: GeForce GTX 1070 Ti, 51.14 MH/s[0m
+[2018-04-22 12:55:50] GPU #3: PNY GTX 1070, 39.88 MH/s[0m
+[2018-04-22 12:55:50] GPU #0: GeForce GTX 1070 Ti, 51.46 MH/s[0m
+[2018-04-22 12:55:50] GPU #0: 1820 MHz 486.00 kH/W 105W 59C FAN 50%[0m
+[2018-04-22 12:55:51] GPU #2: ASUS GTX 1070, 39.51 MH/s[0m
+[2018-04-22 12:55:51] GPU #1: MSI GTX 1070 Ti, 50.32 MH/s[0m
+[2018-04-22 12:55:51][01;37m GPU #3: whirlpool hashrate = 39.88 MH/s[0m
+[2018-04-22 12:55:51][01;37m GPU #1: whirlpool hashrate = 50.32 MH/s[0m
+[2018-04-22 12:55:51][01;37m GPU #4: whirlpool hashrate = 51.14 MH/s[0m
+[2018-04-22 12:55:51][01;37m GPU #0: whirlpool hashrate = 51.46 MH/s[0m
+[2018-04-22 12:55:51][01;37m GPU #2: whirlpool hashrate = 39.51 MH/s[0m
+[2018-04-22 12:55:53][36m Benchmark algo zr5...[0m
+[2018-04-22 12:55:53] GPU #4: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:55:53] GPU #3: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:55:53] GPU #1: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:55:53] GPU #0: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:55:53] GPU #2: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:55:56] GPU #4: GeForce GTX 1070 Ti, 4636.74 kH/s[0m
+[2018-04-22 12:55:56] GPU #0: GeForce GTX 1070 Ti, 4662.90 kH/s[0m
+[2018-04-22 12:55:56] GPU #1: MSI GTX 1070 Ti, 4495.79 kH/s[0m
+[2018-04-22 12:55:57] GPU #3: PNY GTX 1070, 3645.28 kH/s[0m
+[2018-04-22 12:55:57] GPU #2: ASUS GTX 1070, 3675.91 kH/s[0m
+[2018-04-22 12:56:01] GPU #3: PNY GTX 1070, 3611.30 kH/s[0m
+[2018-04-22 12:56:01] GPU #2: ASUS GTX 1070, 3582.95 kH/s[0m
+[2018-04-22 12:56:01] GPU #4: GeForce GTX 1070 Ti, 4652.85 kH/s[0m
+[2018-04-22 12:56:01] GPU #0: GeForce GTX 1070 Ti, 4683.00 kH/s[0m
+[2018-04-22 12:56:02] GPU #1: MSI GTX 1070 Ti, 4515.29 kH/s[0m
+[2018-04-22 12:56:02] GPU #1: 1583 MHz 45.16 kH/W 99W 54C FAN 50%[0m
+[2018-04-22 12:56:02][01;37m GPU #3: zr5 hashrate = 3611.30 kH/s[0m
+[2018-04-22 12:56:02][01;37m GPU #1: zr5 hashrate = 4515.29 kH/s[0m
+[2018-04-22 12:56:02][01;37m GPU #4: zr5 hashrate = 4652.85 kH/s[0m
+[2018-04-22 12:56:02][01;37m GPU #2: zr5 hashrate = 3582.95 kH/s[0m
+[2018-04-22 12:56:02][01;37m GPU #0: zr5 hashrate = 4683.00 kH/s[0m
+[2018-04-22 12:56:02][36m Benchmark results for GPU #0 - GeForce GTX 1070 Ti:[0m
+[2018-04-22 12:56:02]    blakecoin :    5047479.4 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]        blake :    2847031.7 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]      blake2s :    4443470.1 kH/s,     2 MB, 268435456 thr.[0m
+[2018-04-22 12:56:02]          bmw :    1971137.2 kH/s,    66 MB,  2097152 thr.[0m
+[2018-04-22 12:56:02]      bastion :      12993.8 kH/s,   234 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         deep :      43483.3 kH/s,    34 MB,   524288 thr.[0m
+[2018-04-22 12:56:02]       decred :    2990982.3 kH/s,     2 MB, 536870912 thr.[0m
+[2018-04-22 12:56:02]     equihash :          0.4 kH/s,   462 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        fresh :      17834.7 kH/s,  1220 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]     fugue256 :     128198.7 kH/s,    34 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      groestl :      39184.8 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      hmq1725 :       4752.7 kH/s,  1286 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          hsr :      10145.2 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       keccak :     640984.6 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      jackpot :       6961.5 kH/s,   108 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          jha :      14802.2 kH/s,   134 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         lbry :     273295.2 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        luffa :    7590353.6 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        lyra2 :       8706.2 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      lyra2v2 :      40826.6 kH/s,  1570 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       lyra2z :       2123.1 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       myr-gr :      69498.1 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    neoscrypt :        923.7 kH/s,   282 MB,    32768 thr.[0m
+[2018-04-22 12:56:02]        nist5 :      47472.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        penta :       6735.2 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          phi :      21108.4 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    polytimos :       8453.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        qubit :      22884.2 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256d :     877697.3 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256t :     469759.5 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sia :    1319170.5 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sib :       8873.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skein :     411513.1 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       skein2 :     426550.0 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skunk :      14200.8 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]           s3 :      48329.2 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]   timetravel :      12881.6 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       tribus :      17190.3 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      bitcore :      14788.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       x11evo :       9582.7 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x11 :      11298.2 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x13 :      10554.3 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x14 :       9640.2 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x15 :      10108.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x17 :      10119.9 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      vanilla :    1014368.7 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       veltor :      18865.2 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    whirlpool :      50256.2 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          zr5 :       4573.2 kH/s,   328 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02][36m Benchmark results for GPU #1 - MSI GTX 1070 Ti:[0m
+[2018-04-22 12:56:02]    blakecoin :    4892172.4 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]        blake :    2708860.0 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]      blake2s :    4389722.8 kH/s,     2 MB, 268435456 thr.[0m
+[2018-04-22 12:56:02]          bmw :    1954862.4 kH/s,    66 MB,  2097152 thr.[0m
+[2018-04-22 12:56:02]      bastion :      12791.5 kH/s,   234 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         deep :      42473.5 kH/s,    34 MB,   524288 thr.[0m
+[2018-04-22 12:56:02]       decred :    2910557.3 kH/s,     2 MB, 536870912 thr.[0m
+[2018-04-22 12:56:02]     equihash :          0.3 kH/s,   462 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        fresh :      17803.7 kH/s,  1220 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]     fugue256 :     126744.0 kH/s,    34 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      groestl :      35409.1 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      hmq1725 :       4765.5 kH/s,  1286 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          hsr :      10167.7 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       keccak :     608223.6 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      jackpot :       6837.3 kH/s,   108 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          jha :      14050.2 kH/s,   134 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         lbry :     263288.3 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        luffa :     364920.9 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        lyra2 :       8572.4 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      lyra2v2 :      40156.2 kH/s,  1570 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       lyra2z :       1961.1 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       myr-gr :      64928.6 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    neoscrypt :        849.3 kH/s,   282 MB,    32768 thr.[0m
+[2018-04-22 12:56:02]        nist5 :      44410.3 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        penta :       6574.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          phi :      19768.8 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    polytimos :       8278.3 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        qubit :      22498.1 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256d :     802031.1 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256t :     424772.1 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sia :     939712.0 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sib :       8982.0 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skein :     372797.4 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       skein2 :     453236.8 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skunk :      13691.0 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]           s3 :      72881.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]   timetravel :      12690.6 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       tribus :      18842.8 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      bitcore :      14416.6 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       x11evo :       9632.3 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x11 :      11386.6 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x13 :      10401.2 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x14 :       9446.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x15 :       9843.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x17 :       9789.7 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      vanilla :    1016619.2 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       veltor :      19966.0 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    whirlpool :      49136.9 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          zr5 :       4409.5 kH/s,   328 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02][36m Benchmark results for GPU #2 - ASUS GTX 1070:[0m
+[2018-04-22 12:56:02]    blakecoin :    3870551.7 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]        blake :    2130613.3 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]      blake2s :    3514827.0 kH/s,     2 MB, 268435456 thr.[0m
+[2018-04-22 12:56:02]          bmw :    1498985.6 kH/s,    66 MB,  2097152 thr.[0m
+[2018-04-22 12:56:02]      bastion :      10506.2 kH/s,   234 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         deep :      33972.2 kH/s,    34 MB,   524288 thr.[0m
+[2018-04-22 12:56:02]       decred :    2286980.5 kH/s,     2 MB, 536870912 thr.[0m
+[2018-04-22 12:56:02]     equihash :          0.3 kH/s,   462 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        fresh :      14914.8 kH/s,  1220 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]     fugue256 :      94925.0 kH/s,    34 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      groestl :      30426.1 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      hmq1725 :       3904.9 kH/s,  1286 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          hsr :       8311.5 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       keccak :     512976.2 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      jackpot :       5510.3 kH/s,   108 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          jha :      11649.7 kH/s,   134 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         lbry :     219917.0 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        luffa :     280057.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        lyra2 :       6793.8 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      lyra2v2 :      32081.9 kH/s,  1570 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       lyra2z :       1588.4 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       myr-gr :      52359.9 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    neoscrypt :        772.5 kH/s,   282 MB,    32768 thr.[0m
+[2018-04-22 12:56:02]        nist5 :      36063.8 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        penta :       6219.0 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          phi :      16143.6 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    polytimos :       7622.8 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        qubit :      18315.1 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256d :     725278.6 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256t :     375304.6 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sia :    1093295.3 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sib :       7210.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skein :     316083.2 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       skein2 :     311682.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skunk :      13749.4 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]           s3 :     434516.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]   timetravel :      10076.4 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       tribus :      18854.3 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      bitcore :      11090.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       x11evo :       7531.1 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x11 :       8999.1 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x13 :       8154.6 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x14 :       7365.3 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x15 :       7808.6 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x17 :       7699.7 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      vanilla :    1005768.4 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       veltor :      14990.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    whirlpool :      38583.5 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          zr5 :       3499.0 kH/s,   328 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02][36m Benchmark results for GPU #3 - PNY GTX 1070:[0m
+[2018-04-22 12:56:02]    blakecoin :    3945964.7 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]        blake :    2176247.7 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]      blake2s :    3501166.4 kH/s,     2 MB, 268435456 thr.[0m
+[2018-04-22 12:56:02]          bmw :    1515400.9 kH/s,    66 MB,  2097152 thr.[0m
+[2018-04-22 12:56:02]      bastion :      10541.4 kH/s,   234 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         deep :      33877.4 kH/s,    34 MB,   524288 thr.[0m
+[2018-04-22 12:56:02]       decred :    2315791.9 kH/s,     2 MB, 536870912 thr.[0m
+[2018-04-22 12:56:02]     equihash :          0.3 kH/s,   462 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        fresh :      14865.9 kH/s,  1220 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]     fugue256 :      92624.3 kH/s,    34 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      groestl :      30423.9 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      hmq1725 :       3824.2 kH/s,  1286 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          hsr :       8448.7 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       keccak :     490578.9 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      jackpot :       5616.1 kH/s,   108 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          jha :      11554.6 kH/s,   134 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         lbry :     210673.3 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        luffa :     284909.1 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        lyra2 :       6671.1 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      lyra2v2 :      32180.1 kH/s,  1570 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       lyra2z :       1490.1 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       myr-gr :      50954.2 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    neoscrypt :        755.3 kH/s,   282 MB,    32768 thr.[0m
+[2018-04-22 12:56:02]        nist5 :      36298.0 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        penta :       5342.2 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          phi :      16304.1 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    polytimos :       6323.7 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        qubit :      18441.8 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256d :     618795.2 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256t :     340640.3 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sia :     979112.8 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sib :       7324.6 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skein :     302767.1 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       skein2 :     421408.9 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skunk :      10242.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]           s3 :     427009.7 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]   timetravel :      10214.0 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       tribus :      12435.0 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      bitcore :      11046.4 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       x11evo :       7667.4 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x11 :       8886.7 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x13 :       8257.1 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x14 :       7421.4 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x15 :       7757.3 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x17 :       7824.3 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      vanilla :     998080.6 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       veltor :      15217.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    whirlpool :      38943.9 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          zr5 :       3526.7 kH/s,   328 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02][36m Benchmark results for GPU #4 - GeForce GTX 1070 Ti:[0m
+[2018-04-22 12:56:02]    blakecoin :    4888266.8 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]        blake :    2824399.6 kH/s,     2 MB, 1073741824 thr.[0m
+[2018-04-22 12:56:02]      blake2s :    4445203.1 kH/s,     2 MB, 268435456 thr.[0m
+[2018-04-22 12:56:02]          bmw :    1964227.8 kH/s,    66 MB,  2097152 thr.[0m
+[2018-04-22 12:56:02]      bastion :      12995.9 kH/s,   234 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         deep :      43190.2 kH/s,    34 MB,   524288 thr.[0m
+[2018-04-22 12:56:02]       decred :    2935334.2 kH/s,     2 MB, 536870912 thr.[0m
+[2018-04-22 12:56:02]     equihash :          0.4 kH/s,   462 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        fresh :      17703.0 kH/s,  1220 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]     fugue256 :     124470.3 kH/s,    34 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      groestl :      38985.6 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      hmq1725 :       4769.4 kH/s,  1286 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          hsr :      10270.5 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       keccak :     630028.4 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      jackpot :       6717.0 kH/s,   108 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          jha :      14805.7 kH/s,   134 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]         lbry :     279748.0 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        luffa :     374214.3 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        lyra2 :       8843.4 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      lyra2v2 :      40715.0 kH/s,  1570 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       lyra2z :       2135.4 kH/s,   162 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       myr-gr :      69056.8 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    neoscrypt :        891.7 kH/s,   282 MB,    32768 thr.[0m
+[2018-04-22 12:56:02]        nist5 :      46942.7 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        penta :       7310.5 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          phi :      20536.6 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    polytimos :       9240.7 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        qubit :      22663.9 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256d :     861540.0 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      sha256t :     457885.0 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sia :    1295569.9 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          sib :       9093.6 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skein :     398255.0 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       skein2 :     880907.4 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]        skunk :      16468.2 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]           s3 :      57335.1 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]   timetravel :      12910.2 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       tribus :      22382.3 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      bitcore :      14668.1 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       x11evo :       9852.1 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x11 :      11446.6 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x13 :      10508.7 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x14 :       9523.6 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x15 :       9912.3 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          x17 :       9952.3 kH/s,  1218 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]      vanilla :     999114.8 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]       veltor :      19378.2 kH/s,    66 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]    whirlpool :      49941.9 kH/s,     2 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02]          zr5 :       4543.8 kH/s,   328 MB,  1048576 thr.[0m
+[2018-04-22 12:56:02] GPU #4: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:56:02] GPU #3: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:56:02] GPU #1: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:56:02] GPU #2: Intensity set to 19.998, 1047552 cuda threads[0m
+[2018-04-22 12:56:02][31m GPU #4: cuda_check_cpu_init driver shutting down[0m
+[2018-04-22 12:56:02][31m GPU #1: cuda_check_cpu_init driver shutting down[0m
+[2018-04-22 12:56:02][31m GPU #3: cuda_check_cpu_init driver shutting down[0m
