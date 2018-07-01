@@ -13,12 +13,12 @@ export const enum HashRate {
 
 export interface AlgorithmMetadata<T extends schema.Algorithm> {
   algorithm: T;
-  hashRateMultiplier: {
-    [key in schema.Pool]: HashRate;
-  };
+  hashRateMultiplier: { [key in schema.Pool]: HashRate };
 }
 
-function buildAlgorithmMetadata<T extends schema.Algorithm>(algo: T): AlgorithmMetadata<T> {
+function buildAlgorithmMetadata<T extends schema.Algorithm>(
+  algo: T,
+): AlgorithmMetadata<T> {
   let hashRateMultiplier: AlgorithmMetadata<'blake2s'>['hashRateMultiplier'] = {
     ahashpool: HashRate.MH,
     miningpoolhub: HashRate.GH,
@@ -31,6 +31,11 @@ function buildAlgorithmMetadata<T extends schema.Algorithm>(algo: T): AlgorithmM
     case 'quark':
     case 'qubit':
     case 'x11':
+    case 'keccak':
+    case 'keccakc':
+    case 'nist5':
+    case 'lbry':
+    case 'skein':
       hashRateMultiplier.ahashpool = HashRate.GH;
       break;
 
@@ -55,7 +60,9 @@ function buildAlgorithmMetadata<T extends schema.Algorithm>(algo: T): AlgorithmM
   };
 }
 
-type AlgorithmMetadataDictionary = { [algo in schema.Algorithm]: AlgorithmMetadata<algo> };
+type AlgorithmMetadataDictionary = {
+  [algo in schema.Algorithm]: AlgorithmMetadata<algo>
+};
 
 export const ALGORITHM_METADATA = schema.ALL_ALGORITHMS.reduce(
   (result, next): AlgorithmMetadataDictionary => {
@@ -69,5 +76,5 @@ export const ALGORITHM_METADATA = schema.ALL_ALGORITHMS.reduce(
 export const ALGORITHMS = schema.ALL_ALGORITHMS;
 
 export function isAlgorithm(val: string): val is schema.Algorithm {
-  return ALGORITHMS.find((a) => a === val) != null;
+  return ALGORITHMS.find(a => a === val) != null;
 }
